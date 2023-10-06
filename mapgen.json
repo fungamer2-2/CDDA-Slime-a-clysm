@@ -1,0 +1,80 @@
+[
+  {
+    "type": "mapgen",
+    "method": "json",
+    "om_terrain": [ "slime_forest" ],
+    "weight": 1000,
+    "object": {
+      "predecessor_mapgen": "forest",
+      "rows": [
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        "
+      ],
+      "terrain": {
+        " ": [ "t_null", "t_null", "t_null", "t_slime" ]
+      },
+      "furniture": { " ": "f_null" },
+      "flags": [ "ALLOW_TERRAIN_UNDER_OTHER_DATA" ],
+      "place_monsters": [ 
+        { 
+          "monster": "GROUP_SC_SLIME",
+          "x": [ 0, 23 ], "y": [ 0, 23 ],
+          "chance": 2, 
+          "repeat": 6,
+          "spawn_data": { "patrol": [ { "x": [ 0, 23 ], "y": [ 0, 23 ] } ] }
+        }
+      ]
+    }
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "slime_forest",
+    "name": "slime forest",
+    "see_cost": 2,
+    "color": "light_green",
+    "sym": "F",
+    "mondensity": 2,
+    "flags": [ "RISK_HIGH" ]
+  },
+  {
+    "type": "overmap_special",
+    "id": "sc_slime_forest",
+    "overmaps": [
+      { "point": [ 0, 0, 0 ], "overmap": "slime_forest_north" },
+      { "point": [ 1, 0, 0 ], "overmap": "slime_forest_north" },
+      { "point": [ 0, 1, 0 ], "overmap": "slime_forest_north" },
+      { "point": [ -1, 0, 0 ], "overmap": "slime_forest_north" },
+      { "point": [ 0, -1, 0 ], "overmap": "slime_forest_north" },
+      { "point": [ 1, 1, 0 ], "overmap": "slime_forest_north" },
+      { "point": [ 1, -1, 0 ], "overmap": "slime_forest_north" },
+      { "point": [ -1, 1, 0 ], "overmap": "slime_forest_north" },
+      { "point": [ -1, -1, 0 ], "overmap": "slime_forest_north" }
+    ],
+    "locations": [ "forest" ],
+    "city_distance": [ 1, -1 ],
+    "occurrences": [ 0, 40 ],
+    "flags": [ "WILDERNESS" ]
+  }
+]

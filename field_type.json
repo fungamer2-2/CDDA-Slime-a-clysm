@@ -1,0 +1,83 @@
+[
+  {
+    "id": "fd_disorient_cloud",
+    "type": "field_type",
+    "intensity_levels": [
+      {
+        "name": "thin blue gas cloud",
+        "sym": "8",
+        "dangerous": true,
+        "translucency": 1,
+        "color": "light_blue",
+        "effects": [
+          {
+            "effect_id": "disorientation",
+            "body_part": "mouth",
+            "min_duration": "4 seconds",
+            "max_duration": "4 seconds",
+            "immune_inside_vehicle": true
+          }
+        ]
+      },
+      {
+        "name": "blue gas cloud",
+        "color": "blue",
+        "transparent": false,
+        "translucency": 10,
+        "effects": [
+          {
+            "effect_id": "disorientation",
+            "body_part": "mouth",
+            "min_duration": "5 seconds",
+            "max_duration": "5 seconds",
+            "immune_inside_vehicle": true
+          },
+          {
+            "effect_id": "disorientation",
+            "body_part": "head",
+            "min_duration": "4 seconds",
+            "max_duration": "4 seconds",
+            "immune_inside_vehicle": true
+          }
+        ],
+        "scent_neutralization": 1
+      },
+      {
+        "name": "thick blue gas cloud",
+        "color": "blue",
+        "translucency": 0,
+        "effects": [
+          {
+            "effect_id": "disorientation",
+            "body_part": "mouth",
+            "intensity": 4,
+            "min_duration": "9 seconds",
+            "max_duration": "9 seconds",
+            "immune_inside_vehicle": true
+          },
+          {
+            "effect_id": "disorientation",
+            "body_part": "head",
+            "min_duration": "11 seconds",
+            "max_duration": "11 seconds",
+            "immune_inside_vehicle": true
+          }
+        ],
+        "scent_neutralization": 2
+      }
+    ],
+    "decay_amount_factor": 5,
+    "gas_absorption_factor": 12,
+    "dirty_transparency_cache": true,
+    "percent_spread": 10,
+    "outdoor_age_speedup": "0 turns",
+    "immunity_data": { "body_part_env_resistance": [ [ "mouth", 8 ], [ "head", 4 ] ] },
+    "priority": 8,
+    "half_life": "2 minutes",
+    "phase": "gas",
+    "accelerated_decay": true,
+    "display_items": false,
+    "display_field": true,
+    "looks_like": "fd_fog"
+  }
+]

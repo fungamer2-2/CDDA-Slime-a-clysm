@@ -1,0 +1,58 @@
+[
+  {
+    "type": "monstergroup",
+    "name": "GROUP_SLIME_SPECIAL",
+    "monsters": [
+      { "monster": "mon_sc_red_slime", "weight": 70, "cost_multiplier": 2, "starts": "4 days" },
+      { "monster": "mon_sc_orange_slime", "weight": 94 },
+      { "monster": "mon_sc_orange_slime", "weight": 5, "cost_multiplier": 2, "pack_size": [ 2, 7 ]  },
+      { "monster": "mon_sc_purple_slime", "weight": 94 },
+      { "monster": "mon_sc_purple_slime", "weight": 3, "cost_multiplier": 2, "pack_size": [ 2, 7 ] },
+      { "monster": "mon_sc_blue_slime", "weight": 30 },
+      { "monster": "mon_sc_yellow_slime", "weight": 30, "cost_multiplier": 2, "starts": "2 days" },
+      { "monster": "mon_sc_pink_slime", "weight": 50, "cost_multiplier": 3, "starts": "8 days" }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "name": "GROUP_ZOMBIE",
+    "monsters": [
+      { "monster": "mon_sc_slime", "weight": 180, "cost_multiplier": 0 },
+      { "monster": "mon_sc_slime", "weight": 3, "cost_multiplier": 3, "pack_size": [ 3, 6 ] }, 
+      { "monster": "mon_sc_slime", "weight": 5, "cost_multiplier": 4, "pack_size": [ 5, 15 ] },
+      { "monster": "mon_sc_slime_large", "weight": 9, "cost_multiplier": 2 },
+      { "group": "GROUP_SLIME_SPECIAL", "weight": 30 }
+      
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "name": "GROUP_VANILLA",
+    "monsters": [
+      { "monster": "mon_sc_slime", "weight": 100 },
+      { "monster": "mon_sc_slime_large", "weight": 5 }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "name": "GROUP_SC_SLIME",
+    "monsters": [
+      { "monster": "mon_sc_slime", "weight": 100, "pack_size": [ 1, 2 ] },
+      { "monster": "mon_sc_slime_large", "weight": 7, "cost_multiplier": 2 },
+      { "monster": "mon_sc_orange_slime", "weight": 7 },
+      { "monster": "mon_sc_blue_slime", "weight": 7 },
+      { "monster": "mon_sc_purple_slime", "weight": 7 },
+      { "monster": "mon_sc_red_slime", "weight": 7, "cost_multiplier": 3, "starts": "4 days" },
+      { "monster": "mon_sc_yellow_slime", "weight": 7, "cost_multiplier": 2, "starts": "2 days" }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "name": "GROUP_FOREST",
+    "monsters": [
+      { "monster": "mon_sc_slime", "weight": 50, "cost_multiplier": 0 },
+      { "monster": "mon_sc_slime", "weight": 5, "cost_multiplier": 2, "pack_size": [ 3, 6 ] },  
+      { "monster": "mon_sc_slime_large", "weight": 2, "cost_multiplier": 2 }
+    ]
+  }
+]

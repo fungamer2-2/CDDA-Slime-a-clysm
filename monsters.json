@@ -1,0 +1,174 @@
+[
+  {
+    "type": "MONSTER",
+    "abstract": "mon_abstract_slime",
+    "name": "abstract slime",
+    "description": "An abstract object representing slimes.",
+    "default_faction": "slime",
+    "bodytype": "blob",
+    "species": [ "SLIME" ],
+    "material": [ "slime" ],
+    "symbol": "O",
+    "color": "green",
+    "dodge": 1,
+    "phase": "LIQUID",
+    "harvest": "exempt",
+    "vision_day": 20,
+    "vision_night": 5,
+    "melee_damage": [ { "damage_type": "cut", "amount": 0 } ],
+    "death_function": { "message": "The %s's body melts away.", "corpse_type": "NO_CORPSE" },
+    "flags": [ "SEES", "HEARS", "GOODHEARING", "NOHEAD", "NO_BREATHE" ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_slime",
+    "copy-from": "mon_abstract_slime",
+    "name": "slime",
+    "description": "A simple green gelatinous slime, gradually moving across the ground.",
+    "volume": "62500 ml",
+    "weight": "57500 g",
+    "hp": 70,
+    "speed": 50,
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 3,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "armor_bash": 2,
+    "armor_stab": 4,
+    "armor_acid": 0,
+    "armor_elec": 2,
+    "bleed_rate": 25
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_red_slime",
+    "name": "red slime",
+    "//": "red slimes have natural regeneration abilities",
+    "description": "A red gelatinous slime, gradually moving across the ground. Its damage appears to somehow heal itself.",
+    "copy-from": "mon_sc_slime",
+    "regenerates": 2,
+    "bleed_rate": 15,
+    "color": "red"
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_slime_large",
+    "name": "large slime",
+    "copy-from": "mon_sc_slime",
+    "proportional": { "hp": 2.0, "volume": 2.0, "speed": 1.25, "attack_cost": 1.25 },
+    "description": "A large green gelatinous slime, gradually moving across the ground.",
+    "melee_skill": 5,
+    "dodge": 0,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "armor_bash": 4,
+    "armor_stab": 6,
+    "armor_acid": 5,
+    "armor_elec": 5,
+    "armor_bullet": 4
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_orange_slime",
+    "name": "orange slime",
+    "//": "orange slimes are 40% faster and have +1 more dodge",
+    "description": "An orange gelatinous slime, gradually moving across the ground. It seems to move fast, for a slime creature.",
+    "copy-from": "mon_sc_slime",
+    "color": "light_red",
+    "proportional": { "speed": 1.4 },
+    "relative": { "dodge": 1 }
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_yellow_slime",
+    "name": "yellow slime",
+    "description": "A yellow gelatinous slime, slowly moving across the ground. Its attacks may discharge electric currents.",
+    "copy-from": "mon_sc_slime",
+    "color": "yellow",
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "attack_type": "melee",
+        "id": "electric_current",
+        "cooldown": 3,
+        "move_cost": 100,
+        "accuracy": 6,
+        "hitsize_min": 10,
+        "damage_max_instance": [ { "damage_type": "electric", "amount": 8, "armor_multiplier": 0.5 } ],
+        "hit_dmg_u": "%1$s sends an electric current to your %2$s!",
+        "hit_dmg_npc": "%1$s sends an electric current into <npcname>!",
+        "miss_msg_u": "%1$s tries to send an electric current at you, but you dodge!",
+        "miss_msg_npc": "%1$s tries to send an electric current at <npcname>, but they dodge!",
+        "no_dmg_u": "%1$s sends an electric current at you, but it reflects off your armor.",
+        "no_dmg_npc": "%1$s sends an electric current at <npcname>, but it reflects off their armor."
+      }
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_blue_slime",
+    "name": "blue slime",
+    "//": "blue slimes are 20% slower, but releases a blue cloud that causes disorientation",
+    "description": "A blue gelatinous slime, slowly moving across the ground. It seems to release a blue cloud of gas sometimes.",
+    "copy-from": "mon_sc_slime",
+    "color": "blue",
+    "proportional": { "speed": 0.8, "attack_cost": 0.8 },
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "id": "blue_gas",
+        "spell_data": { "id": "blue_gas_emitter" },
+        "attack_type": "spell",
+        "allow_no_target": true,
+        "cooldown": 7,
+        "monster_message": "%1$s releases a cloud of blue gas!"
+      }
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_purple_slime",
+    "name": "purple slime",
+    "copy-from": "mon_sc_slime",
+    "description": "A purple gelatinous slime, gradually moving across the ground. It often appears to randomly shift positions in the blink of an eye.",
+    "color": "magenta",
+    "relative": { "dodge": 2 },
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "id": "teleport",
+        "spell_data": { "id": "slime_teleport" },
+        "attack_type": "spell",
+        "allow_no_target": true,
+        "cooldown": 5,
+        "max_range": 10,
+        "monster_message": "%1$s suddenly shifts to a new position!"
+      }
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_pink_slime",
+    "name": "pink slime",
+    "//": "pink slimes can heal other slimes",
+    "description": "A pink gelatinous slime, gradually moving across the ground. It has the ability to heal nearby slimes.",
+    "copy-from": "mon_sc_slime",
+    "regenerates": 15,
+    "bleed_rate": 10,
+    "color": "pink",
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "id": "aoe_heal_slimes",
+        "attack_type": "spell",
+        "spell_data": { "id": "slime_aoe_heal" },
+        "cooldown": 6,
+        "//": "TODO: In 0.H, add a condition field to only use this when slimes are nearby",
+        "monster_message": "%1$s sends out an aura to heal its nearby allies!"
+      }
+    ],
+    "extend": { "flags": [ "SWARMS" ] },
+    "//2": "SWARMS flag makes it more likely to stick with other slimes, in order to heal them"
+  }
+]

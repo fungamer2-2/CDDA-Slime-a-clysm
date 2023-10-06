@@ -1,0 +1,34 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "slimeclysm",
+    "name": "Slime-a-clysm",
+    "authors": [ "fungamer2" ],
+    "maintainers": [ "fungamer2" ],
+    "description": "A world full of various slime creatures. NOTE: Currently only designed for 0.G stable.",
+    "category": "total_conversion",
+    "dependencies": [ "dda" ]
+  },
+  {
+    "type": "MONSTER_WHITELIST",
+    "mode": "EXCLUSIVE",
+    "species": [ "SLIME" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PORTAL_STORM_WARN_OR_CAUSE_RECURRING",
+    "recurrence": [ "10 days", "11 days" ],
+    "global": true,
+    "effect": [  ]
+  },
+  {
+    "type": "SCENARIO_BLACKLIST",
+    "subtype": "blacklist",
+    "scenarios": [
+      "strong_portal_storm",
+      "strong_portal_storm_base",
+      "quick_portal_storm_base",
+      "portal_dependent"
+    ]
+  }
+]
