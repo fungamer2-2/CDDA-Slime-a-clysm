@@ -164,7 +164,6 @@
         "attack_type": "spell",
         "spell_data": { "id": "slime_aoe_heal" },
         "cooldown": 6,
-        "//": "TODO: In 0.H, add a condition field to only use this when slimes are nearby",
         "monster_message": "%1$s sends out an aura to heal its nearby allies!"
       }
     ],
