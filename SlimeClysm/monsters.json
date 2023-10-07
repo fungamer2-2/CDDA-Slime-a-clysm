@@ -72,11 +72,11 @@
     "type": "MONSTER",
     "id": "mon_sc_orange_slime",
     "name": "orange slime",
-    "//": "orange slimes are 40% faster and have +1 more dodge",
+    "//": "orange slimes are 50% faster and have +1 more dodge",
     "description": "An orange gelatinous slime, gradually moving across the ground. It seems to move fast, for a slime creature.",
     "copy-from": "mon_sc_slime",
     "color": "light_red",
-    "proportional": { "speed": 1.4 },
+    "proportional": { "speed": 1.5 },
     "relative": { "dodge": 1 }
   },
   {
@@ -132,7 +132,8 @@
     "name": "purple slime",
     "copy-from": "mon_sc_slime",
     "description": "A purple gelatinous slime, gradually moving across the ground. It often appears to randomly shift positions in the blink of an eye.",
-    "color": "magenta",
+    "color": "magenta_blue",
+    "proportional": { "speed": 1.2 },
     "relative": { "dodge": 2 },
     "special_attacks": [
       {
@@ -154,7 +155,7 @@
     "//": "pink slimes can heal other slimes",
     "description": "A pink gelatinous slime, gradually moving across the ground. It has the ability to heal nearby slimes.",
     "copy-from": "mon_sc_slime",
-    "regenerates": 15,
+    "regenerates": 3,
     "bleed_rate": 10,
     "color": "pink",
     "special_attacks": [
