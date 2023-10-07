@@ -27,7 +27,7 @@
     "description": "A simple green gelatinous slime, gradually moving across the ground.",
     "volume": "62500 ml",
     "weight": "57500 g",
-    "hp": 70,
+    "hp": 65,
     "speed": 50,
     "aggression": 100,
     "morale": 100,
@@ -47,7 +47,7 @@
     "//": "red slimes have natural regeneration abilities",
     "description": "A red gelatinous slime, gradually moving across the ground. Its damage appears to somehow heal itself.",
     "copy-from": "mon_sc_slime",
-    "regenerates": 2,
+    "regenerates": 3,
     "bleed_rate": 15,
     "color": "red"
   },
@@ -155,7 +155,7 @@
     "//": "pink slimes can heal other slimes",
     "description": "A pink gelatinous slime, gradually moving across the ground. It has the ability to heal nearby slimes.",
     "copy-from": "mon_sc_slime",
-    "regenerates": 3,
+    "regenerates": 5,
     "bleed_rate": 10,
     "color": "pink",
     "special_attacks": [
@@ -164,7 +164,7 @@
         "id": "aoe_heal_slimes",
         "attack_type": "spell",
         "spell_data": { "id": "slime_aoe_heal" },
-        "cooldown": 6,
+        "cooldown": 8,
         "monster_message": "%1$s sends out an aura to heal its nearby allies!"
       }
     ],
