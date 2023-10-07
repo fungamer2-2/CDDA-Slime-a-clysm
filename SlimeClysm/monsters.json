@@ -132,7 +132,7 @@
     "name": "purple slime",
     "copy-from": "mon_sc_slime",
     "description": "A purple gelatinous slime, gradually moving across the ground. It often appears to randomly shift positions in the blink of an eye.",
-    "color": "magenta_blue",
+    "color": "light_blue_magenta",
     "proportional": { "speed": 1.2 },
     "relative": { "dodge": 2 },
     "special_attacks": [
