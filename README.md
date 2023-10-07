@@ -7,3 +7,5 @@ I also created my own various types of slime monsters and a slime forest that ma
 How to use this mod:
 - Have Cataclysm: DDA, 0.G stable installed 
 - Place the "SlimeClysm" folder inside "data/mods" 
+
+If you discover a bug or have a feature request, feel free to open an [issue](https://github.com/fungamer2-2/CDDA-Slime-a-clysm/issues/new).
