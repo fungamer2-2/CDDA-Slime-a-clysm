@@ -1,44 +1,5 @@
 [
   {
-    "id": "debug_heal",
-    "type": "SPELL",
-    "name": "Debug Heal",
-    "description": "You shouldn't see this except in debug mode.",
-    "valid_targets": [ "self" ],
-    "min_damage": -999,
-    "max_damage": -999,
-    "effect": "attack",
-    "shape": "blast",
-    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
-    "extra_effects": [ { "id": "no_pain" } ]
-  },
-  {
-    "id": "no_pain",
-    "type": "SPELL",
-    "name": "Remove Pain",
-    "description": "You shouldn't see this in-game.",
-    "valid_targets": [ "self" ],
-    "min_damage": 999,
-    "max_damage": 999,
-    "effect": "recover_energy",
-    "effect_str": "PAIN",
-    "shape": "blast",
-    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ]
-  },
-  {
-    "id": "debug_regen",
-    "type": "effect_type",
-    "name": [ "Debug Regen" ],
-    "desc": [ "You are regenerating as fast as possible." ],
-    "rating": "good",
-    "show_intensity": false,
-    "enchantments": [
-      {
-        "intermittent_activation": { "effects": [ { "frequency": "1 seconds", "spell_effects": [ { "id": "debug_heal" } ] } ] }
-      }
-    ]
-  },
-  {
     "id": "disorientation",
     "type": "effect_type",
     "name": [ "Disoriented" ],
