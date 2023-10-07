@@ -1,4 +1,4 @@
-# Slime-a-clysm-MOD
+# Slime-a-clysm
 
 A mod of Cataclysm: Dark Days Ahead, where the world changes to one full of slime monsters instead of zombies
 
