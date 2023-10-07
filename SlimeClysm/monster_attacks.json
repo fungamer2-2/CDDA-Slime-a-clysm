@@ -42,14 +42,14 @@
     "valid_targets": [ "ally" ],
     "targeted_monster_species": [ "SLIME" ],
     "min_damage": -10,
-    "max_damage": -20,
+    "max_damage": -18,
     "min_range": 3,
     "max_range": 3,
     "min_aoe": 3,
     "max_aoe": 3,
     "effect": "attack",
     "shape": "blast",
-    "base_casting_time": 150,
+    "base_casting_time": 200,
     "flags": [ "SILENT", "NO_EXPLOSION_SFX", "RANDOM_DAMAGE" ]
   }
 ]
