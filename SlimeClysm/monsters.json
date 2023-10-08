@@ -96,7 +96,7 @@
         "accuracy": 6,
         "hitsize_min": 10,
         "blockable": false,
-        "damage_max_instance": [ { "damage_type": "electric", "amount": 8, "armor_multiplier": 0.6 } ],
+        "damage_max_instance": [ { "damage_type": "electric", "amount": 8, "armor_multiplier": 0.5 } ],
         "hit_dmg_u": "%1$s sends an electric current to your %2$s!",
         "hit_dmg_npc": "%1$s sends an electric current into <npcname>!",
         "miss_msg_u": "%1$s tries to send an electric current at you, but you dodge!",

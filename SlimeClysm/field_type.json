@@ -67,7 +67,7 @@
       }
     ],
     "decay_amount_factor": 5,
-    "gas_absorption_factor": 12,
+    "gas_absorption_factor": 6,
     "dirty_transparency_cache": true,
     "percent_spread": 10,
     "outdoor_age_speedup": "0 turns",
