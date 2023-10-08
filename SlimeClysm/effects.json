@@ -15,13 +15,5 @@
       "dex_mod": [ -2 ],
       "per_mod": [ -2 ]
     }
-  },
-  {
-    "id": "slime_spawned",
-    "type": "effect_type",
-    "base_mods": { "speed_mod": [ -5 ] },
-    "scaling_mods": { "speed_mod": [ -5 ] },
-    "int_dur_factor": "6 s",
-    "max_intensity": 10
   }
 ]
