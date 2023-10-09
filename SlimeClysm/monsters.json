@@ -191,6 +191,15 @@
   },
   {
     "type": "MONSTER",
+    "id": "mon_sc_transparent_slime",
+    "name": "transparent slime",
+    "description": "A large transparent gelatinous slime, gradually moving across the ground. It's so clear that you can see right through it, so it can be easy to miss unless you're paying attention.",
+    "copy-from": "mon_sc_slime",
+    "color": "white",
+    "extend": { "flags": [ "CAMOUFLAGE" ] }
+  },
+  {
+    "type": "MONSTER",
     "id": "mon_sc_red_slime_large",
     "name": "large red slime",
     "description": "A large red gelatinous slime, gradually moving across the ground. Its damage appears to somehow heal itself.",
@@ -345,6 +354,20 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_pink", "hit_self": true }
+    }
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_transparent_slime_large",
+    "name": "large transparent slime",
+    "description": "A large transparent gelatinous slime, gradually moving across the ground. It's so clear that you can see right through it, so it can be easy to miss unless you're paying attention.",
+    "copy-from": "mon_sc_slime_large",
+    "color": "white",
+    "extend": { "flags": [ "CAMOUFLAGE" ] },
+    "death_function": {
+      "message": "The %s splits in two!",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_large_slime_split_transparent", "hit_self": true }
     }
   }
 ]
