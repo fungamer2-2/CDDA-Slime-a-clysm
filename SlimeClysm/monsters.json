@@ -97,7 +97,7 @@
     "copy-from": "mon_sc_slime",
     "color": "cyan",
     "armor_cold": 5,
-    "melee_damage": [ { "damage_type": "cold", "amount": 2 } ],
+    "melee_damage": [ { "damage_type": "cold", "amount": 3 } ],
     "emit_fields": [ { "emit_id": "emit_cold_air", "delay": "1 s" } ]
   },
   {
@@ -186,7 +186,8 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split", "hit_self": true }
-    }
+    },
+    "extend": { "flags": [ "BASHES" ] }
   },
   {
     "type": "MONSTER",
@@ -259,7 +260,7 @@
     "copy-from": "mon_sc_slime_large",
     "color": "cyan",
     "armor_cold": 10,
-    "melee_damage": [ { "damage_type": "cold", "amount": 4 } ],
+    "melee_damage": [ { "damage_type": "cold", "amount": 6 } ],
     "emit_fields": [ { "emit_id": "emit_cold_air2", "delay": "1 s" } ],
     "death_function": {
       "message": "The %s splits in two!",
