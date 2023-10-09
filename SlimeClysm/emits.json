@@ -1,0 +1,29 @@
+[
+  {
+    "id": "emit_blue_disorient_gas",
+    "type": "emit",
+    "field": "fd_disorient_cloud",
+    "qty": 15
+  },
+  {
+    "id": "emit_blue_disorient_gas2",
+    "type": "emit",
+    "field": "fd_disorient_cloud",
+    "qty": 22,
+    "intensity": 2
+  },
+  {
+    "id": "emit_cold_air",
+    "type": "emit",
+    "field": "fd_cold_air2",
+    "qty": 20,
+    "intensity": 3
+  },
+  {
+    "id": "emit_cold_air2",
+    "type": "emit",
+    "field": "fd_cold_air3",
+    "qty": 20,
+    "intensity": 3
+  }
+]

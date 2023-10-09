@@ -27,7 +27,7 @@
     "description": "A simple green gelatinous slime, gradually moving across the ground.",
     "volume": "62500 ml",
     "weight": "57500 g",
-    "hp": 65,
+    "hp": 70,
     "speed": 50,
     "aggression": 100,
     "morale": 100,
@@ -47,26 +47,9 @@
     "//": "red slimes have natural regeneration abilities",
     "description": "A red gelatinous slime, gradually moving across the ground. Its damage appears to somehow heal itself.",
     "copy-from": "mon_sc_slime",
-    "regenerates": 3,
+    "regenerates": 5,
     "bleed_rate": 15,
     "color": "red"
-  },
-  {
-    "type": "MONSTER",
-    "id": "mon_sc_slime_large",
-    "name": "large slime",
-    "copy-from": "mon_sc_slime",
-    "proportional": { "hp": 2.0, "volume": 2.0, "speed": 1.25, "attack_cost": 1.25 },
-    "description": "A large green gelatinous slime, gradually moving across the ground.",
-    "melee_skill": 5,
-    "dodge": 0,
-    "melee_dice": 2,
-    "melee_dice_sides": 4,
-    "armor_bash": 4,
-    "armor_stab": 6,
-    "armor_acid": 5,
-    "armor_elec": 5,
-    "armor_bullet": 4
   },
   {
     "type": "MONSTER",
@@ -96,7 +79,7 @@
         "accuracy": 6,
         "hitsize_min": 10,
         "blockable": false,
-        "damage_max_instance": [ { "damage_type": "electric", "amount": 8, "armor_multiplier": 0.5 } ],
+        "damage_max_instance": [ { "damage_type": "electric", "amount": 8, "armor_multiplier": 0.6 } ],
         "hit_dmg_u": "%1$s sends an electric current to your %2$s!",
         "hit_dmg_npc": "%1$s sends an electric current into <npcname>!",
         "miss_msg_u": "%1$s tries to send an electric current at you, but you dodge!",
@@ -105,6 +88,17 @@
         "no_dmg_npc": "%1$s sends an electric current at <npcname>, but it reflects off their armor."
       }
     ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_cyan_slime",
+    "name": "cyan slime",
+    "description": "A cyan gelatinous slime, gradually moving across the ground. The air around it seems colder than usual.",
+    "copy-from": "mon_sc_slime",
+    "color": "cyan",
+    "armor_cold": 5,
+    "melee_damage": [ { "damage_type": "cold", "amount": 2 } ],
+    "emit_fields": [ { "emit_id": "emit_cold_air", "delay": "1 s" } ]
   },
   {
     "type": "MONSTER",
@@ -156,7 +150,7 @@
     "//": "pink slimes can heal other slimes",
     "description": "A pink gelatinous slime, gradually moving across the ground. It has the ability to heal nearby slimes.",
     "copy-from": "mon_sc_slime",
-    "regenerates": 5,
+    "regenerates": 8,
     "bleed_rate": 10,
     "color": "pink",
     "special_attacks": [
@@ -171,5 +165,165 @@
     ],
     "extend": { "flags": [ "SWARMS" ] },
     "//2": "SWARMS flag makes it more likely to stick with other slimes, in order to heal them"
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_slime_large",
+    "name": "large slime",
+    "copy-from": "mon_sc_slime",
+    "proportional": { "hp": 2.0, "volume": 2.0, "speed": 1.25, "attack_cost": 1.25 },
+    "description": "A large green gelatinous slime, gradually moving across the ground.",
+    "melee_skill": 5,
+    "dodge": 0,
+    "melee_dice": 3,
+    "melee_dice_sides": 3,
+    "armor_bash": 4,
+    "armor_stab": 6,
+    "armor_acid": 5,
+    "armor_elec": 5,
+    "armor_bullet": 4,
+    "death_function": {
+      "message": "The %s splits in two!",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_large_slime_split", "hit_self": true }
+    }
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_red_slime_large",
+    "name": "large red slime",
+    "description": "A large red gelatinous slime, gradually moving across the ground. Its damage appears to somehow heal itself.",
+    "copy-from": "mon_sc_slime_large",
+    "regenerates": 10,
+    "bleed_rate": 15,
+    "color": "red",
+    "death_function": {
+      "message": "The %s splits in two!",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_large_slime_split_red", "hit_self": true }
+    }
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_orange_slime_large",
+    "name": "large orange slime",
+    "//": "orange slimes are 50% faster and have +1 more dodge",
+    "description": "A large orange gelatinous slime, gradually moving across the ground. It seems to move fast, for a slime creature.",
+    "copy-from": "mon_sc_slime_large",
+    "color": "light_red",
+    "proportional": { "speed": 1.5 },
+    "relative": { "dodge": 1 },
+    "death_function": {
+      "message": "The %s splits in two!",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_large_slime_split_orange", "hit_self": true }
+    }
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_yellow_slime_large",
+    "name": "large yellow slime",
+    "description": "A large yellow gelatinous slime, slowly moving across the ground. Its attacks may discharge electric currents.",
+    "copy-from": "mon_sc_slime_large",
+    "color": "yellow",
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "attack_type": "melee",
+        "id": "electric_current_large",
+        "cooldown": 3,
+        "move_cost": 150,
+        "accuracy": 10,
+        "hitsize_min": 10,
+        "blockable": false,
+        "damage_max_instance": [ { "damage_type": "electric", "amount": 14, "armor_multiplier": 0.6 } ],
+        "hit_dmg_u": "%1$s sends a strong electric current to your %2$s!",
+        "hit_dmg_npc": "%1$s sends a strong electric current into <npcname>!",
+        "miss_msg_u": "%1$s tries to send an electric current at you, but you dodge!",
+        "miss_msg_npc": "%1$s tries to send an electric current at <npcname>, but they dodge!",
+        "no_dmg_u": "%1$s sends an electric current at you, but it reflects off your armor.",
+        "no_dmg_npc": "%1$s sends an electric current at <npcname>, but it reflects off their armor."
+      }
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_cyan_slime_large",
+    "name": "cyan slime",
+    "description": "A cyan gelatinous slime, gradually moving across the ground. The air around it seems colder than usual.",
+    "copy-from": "mon_sc_slime_large",
+    "color": "cyan",
+    "armor_cold": 10,
+    "melee_damage": [ { "damage_type": "cold", "amount": 4 } ],
+    "emit_fields": [ { "emit_id": "emit_cold_air2", "delay": "1 s" } ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_blue_slime_large",
+    "name": "large blue slime",
+    "//": "blue slimes are 20% slower, but releases a blue cloud that causes disorientation",
+    "description": "A large blue gelatinous slime, slowly moving across the ground. It seems to release a blue cloud of gas sometimes.",
+    "copy-from": "mon_sc_slime_large",
+    "color": "blue",
+    "proportional": { "speed": 0.8, "attack_cost": 0.8 },
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "id": "blue_gas",
+        "spell_data": { "id": "blue_gas_emitter_large" },
+        "attack_type": "spell",
+        "allow_no_target": true,
+        "cooldown": 7,
+        "monster_message": "%1$s releases a cloud of blue gas!"
+      }
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_purple_slime_large",
+    "name": "large purple slime",
+    "copy-from": "mon_sc_slime_large",
+    "description": "A purple gelatinous slime, gradually moving across the ground. It often appears to randomly shift positions in the blink of an eye.",
+    "color": "light_blue_magenta",
+    "proportional": { "speed": 1.2 },
+    "dodge": 2,
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "id": "teleport",
+        "spell_data": { "id": "slime_teleport" },
+        "attack_type": "spell",
+        "allow_no_target": true,
+        "cooldown": 5,
+        "max_range": 10,
+        "monster_message": "%1$s suddenly shifts to a new position!"
+      }
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_pink_slime_large",
+    "name": "large pink slime",
+    "description": "A large pink gelatinous slime, gradually moving across the ground. It has the ability to heal nearby slimes.",
+    "copy-from": "mon_sc_slime_large",
+    "regenerates": 16,
+    "bleed_rate": 10,
+    "color": "pink",
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "id": "large_slime_aoe_heal",
+        "attack_type": "spell",
+        "spell_data": { "id": "large_slime_aoe_heal" },
+        "cooldown": 8,
+        "monster_message": "%1$s sends out an aura to heal its nearby allies!"
+      }
+    ],
+    "extend": { "flags": [ "SWARMS" ] },
+    "death_function": {
+      "message": "The %s splits in two!",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_large_slime_split_pink", "hit_self": true }
+    }
   }
 ]
