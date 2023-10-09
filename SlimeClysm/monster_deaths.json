@@ -60,7 +60,7 @@
     "flags": [ "SILENT", "NO_EXPLOSION_SFX", "HOSTILE_SUMMON", "PERMANENT", "SPAWN_WITH_DEATH_DROPS" ]
   },
   {
-    "id": "death_large_slime_split_blue",
+    "id": "death_large_slime_split_cyan",
     "type": "SPELL",
     "name": "Cyan Slime Split (large)",
     "description": "The cyan large slime splits into two normal-sized cyan slimes",

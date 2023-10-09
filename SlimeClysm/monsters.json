@@ -244,7 +244,12 @@
         "no_dmg_u": "%1$s sends an electric current at you, but it reflects off your armor.",
         "no_dmg_npc": "%1$s sends an electric current at <npcname>, but it reflects off their armor."
       }
-    ]
+    ],
+    "death_function": {
+      "message": "The %s splits in two!",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_large_slime_split_yellow", "hit_self": true }
+    }
   },
   {
     "type": "MONSTER",
@@ -255,7 +260,12 @@
     "color": "cyan",
     "armor_cold": 10,
     "melee_damage": [ { "damage_type": "cold", "amount": 4 } ],
-    "emit_fields": [ { "emit_id": "emit_cold_air2", "delay": "1 s" } ]
+    "emit_fields": [ { "emit_id": "emit_cold_air2", "delay": "1 s" } ],
+    "death_function": {
+      "message": "The %s splits in two!",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_large_slime_split_cyan", "hit_self": true }
+    }
   },
   {
     "type": "MONSTER",
@@ -276,7 +286,12 @@
         "cooldown": 7,
         "monster_message": "%1$s releases a cloud of blue gas!"
       }
-    ]
+    ],
+    "death_function": {
+      "message": "The %s splits in two!",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_large_slime_split_blue", "hit_self": true }
+    }
   },
   {
     "type": "MONSTER",
@@ -298,7 +313,12 @@
         "max_range": 10,
         "monster_message": "%1$s suddenly shifts to a new position!"
       }
-    ]
+    ],
+    "death_function": {
+      "message": "The %s splits in two!",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_large_slime_split_purple", "hit_self": true }
+    }
   },
   {
     "type": "MONSTER",
