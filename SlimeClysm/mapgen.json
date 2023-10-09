@@ -39,7 +39,7 @@
       "flags": [ "ALLOW_TERRAIN_UNDER_OTHER_DATA" ],
       "place_monsters": [ 
         { 
-          "monster": "GROUP_SC_SLIME",
+          "monster": "GROUP_SLIME_FOREST",
           "x": [ 0, 23 ], "y": [ 0, 23 ],
           "chance": 2, 
           "repeat": 6,

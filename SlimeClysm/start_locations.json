@@ -1,0 +1,20 @@
+[
+  {
+    "type": "start_location",
+    "id": "sloc_slime_forest",
+    "name": "slime forest",
+    "terrain": [ { "om_terrain": "slime_forest" } ],
+    "flags": [ "ALLOW_OUTSIDE" ]
+  },
+  {
+    "type": "scenario",
+    "id": "slimeforest",
+    "name": "Slime Forest",
+    "points": -2,
+    "description": "You were exploring the world when you came across a slime forest. For some reason, you decided to check it out, but it's full of a bunch of hostile slimes. They seem to have noticed you already.",
+    "allowed_locs": [ "sloc_slime_forest" ],
+    "start_name": "In Slime Forest",
+    "flags": [ "LONE_START" ],
+    "surround_groups": [ [ "GROUP_SLIME_FOREST", 10.0 ] ]
+  }
+]

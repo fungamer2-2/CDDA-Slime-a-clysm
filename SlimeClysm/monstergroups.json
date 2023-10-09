@@ -54,13 +54,13 @@
   },
   {
     "type": "monstergroup",
-    "name": "GROUP_SC_SLIME",
+    "name": "GROUP_SLIME_FOREST",
     "monsters": [
       { "monster": "mon_sc_slime", "weight": 200, "pack_size": [ 1, 2 ] },
       { "monster": "mon_sc_slime_large", "weight": 13, "cost_multiplier": 3 },
       { "monster": "mon_sc_slime_large", "weight": 4, "cost_multiplier": 6, "pack_size": [ 2, 4 ] },
-      { "group": "GROUP_SLIME_SPECIAL", "weight": 15 },
-      { "group": "GROUP_LARGE_SLIME_SPECIAL", "weight": 2, "cost_multiplier": 3 }
+      { "group": "GROUP_SLIME_SPECIAL", "weight": 18, "starts": "6 hours" },
+      { "group": "GROUP_LARGE_SLIME_SPECIAL", "weight": 3, "cost_multiplier": 3, "starts": "6 hours" }
     ]
   },
   {
