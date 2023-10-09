@@ -249,8 +249,8 @@
   {
     "type": "MONSTER",
     "id": "mon_sc_cyan_slime_large",
-    "name": "cyan slime",
-    "description": "A cyan gelatinous slime, gradually moving across the ground. The air around it seems colder than usual.",
+    "name": "large cyan slime",
+    "description": "A large cyan gelatinous slime, gradually moving across the ground. The air around it seems colder than usual.",
     "copy-from": "mon_sc_slime_large",
     "color": "cyan",
     "armor_cold": 10,
