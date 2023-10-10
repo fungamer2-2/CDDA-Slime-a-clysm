@@ -30,6 +30,20 @@
   },
   {
     "type": "SPELL",
+    "id": "cyan_cold_air",
+    "name": { "str": "Emit Cold Air" },
+    "description": "Emits cold air",
+    "effect": "emit",
+    "effect_str": "emit_cold_air",
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "min_range": 1,
+    "max_range": 5,
+    "base_casting_time": 0,
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ]
+  },
+  {
+    "type": "SPELL",
     "id": "blue_gas_emitter_large",
     "name": { "str": "Emit Blue Gas (large)" },
     "description": "Emits a blue gas cloud that causes disorientation.",

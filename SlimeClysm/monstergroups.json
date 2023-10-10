@@ -13,7 +13,9 @@
       { "monster": "mon_sc_blue_slime", "weight": 30 },
       { "monster": "mon_sc_yellow_slime", "weight": 30, "cost_multiplier": 2, "starts": "2 days" },
       { "monster": "mon_sc_pink_slime", "weight": 50, "cost_multiplier": 3, "starts": "8 days" },
-      { "monster": "mon_sc_transparent_slime", "weight": 20 }
+      { "monster": "mon_sc_transparent_slime", "weight": 20 },
+      { "monster": "mon_sc_dasher_slime", "weight": 20 },
+      { "monster": "mon_sc_dasher_slime", "weight": 3, "cost_multiplier": 2, "pack_size": [ 2, 7 ] }
     ]
   },
   {
@@ -29,7 +31,9 @@
       { "monster": "mon_sc_blue_slime_large", "weight": 30 },
       { "monster": "mon_sc_yellow_slime_large", "weight": 30, "cost_multiplier": 2, "starts": "2 days" },
       { "monster": "mon_sc_pink_slime_large", "weight": 50, "cost_multiplier": 3, "starts": "8 days" },
-      { "monster": "mon_sc_transparent_slime_large", "weight": 20 }
+      { "monster": "mon_sc_transparent_slime_large", "weight": 20 },
+      { "monster": "mon_sc_dasher_slime_large", "weight": 20 },
+      { "monster": "mon_sc_dasher_slime_large", "weight": 3, "cost_multiplier": 2, "pack_size": [ 2, 7 ] }
     ]
   },
   {
@@ -39,9 +43,9 @@
       { "monster": "mon_sc_slime", "weight": 180, "cost_multiplier": 0 },
       { "monster": "mon_sc_slime", "weight": 5, "cost_multiplier": 3, "pack_size": [ 3, 6 ] }, 
       { "monster": "mon_sc_slime", "weight": 3, "cost_multiplier": 4, "pack_size": [ 5, 15 ] },
-      { "monster": "mon_sc_slime_large", "weight": 10, "cost_multiplier": 3 },
-      { "group": "GROUP_SLIME_SPECIAL", "weight": 30 },
-      { "group": "GROUP_LARGE_SLIME_SPECIAL", "weight": 3, "cost_multiplier": 3 }
+      { "monster": "mon_sc_slime_large", "weight": 15, "cost_multiplier": 3 },
+      { "group": "GROUP_SLIME_SPECIAL", "weight": 35 },
+      { "group": "GROUP_LARGE_SLIME_SPECIAL", "weight": 4, "cost_multiplier": 3 }
     ]
   },
   {

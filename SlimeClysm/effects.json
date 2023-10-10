@@ -15,5 +15,17 @@
       "dex_mod": [ -2 ],
       "per_mod": [ -2 ]
     }
+  },
+  {
+    "id": "slime_dash",
+    "type": "effect_type",
+    "base_mods": {
+      "dodge_mod": [ 2 ],
+      "hit_mod": [ 3 ]
+    },
+    "scaling_mods": {
+      "hit_mod": [ 2 ]
+    },
+    "max_duration": "3 s"
   }
 ]
