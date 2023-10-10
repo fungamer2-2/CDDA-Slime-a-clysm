@@ -4,6 +4,8 @@ A mod of Cataclysm: Dark Days Ahead, where the world changes to one full of slim
 
 I also created my own various types of slime monsters and a slime forest that may appear in-game as well
 
+![Slime Forest](./screenshot.png)
+
 How to use this mod:
 - Have Cataclysm: DDA, 0.G stable installed 
 - Download and place the "SlimeClysm" folder inside "data/mods" 
