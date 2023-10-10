@@ -301,7 +301,17 @@
     "color": "cyan",
     "armor_cold": 10,
     "melee_damage": [ { "damage_type": "cold", "amount": 6 } ],
-    "emit_fields": [ { "emit_id": "emit_cold_air2", "delay": "1 s" } ],
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "id": "cold_air_emit2",
+        "spell_data": { "id": "cyan_cold_air2" },
+        "attack_type": "spell",
+        "max_range": 4,
+        "cooldown": 4,
+        "monster_message": "The air around %1$s begins to feel very cold."
+      }
+    ],
     "death_function": {
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",

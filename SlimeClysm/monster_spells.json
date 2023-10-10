@@ -37,7 +37,21 @@
     "effect_str": "emit_cold_air",
     "valid_targets": [ "self" ],
     "shape": "blast",
-    "min_range": 1,
+    "min_range": 5,
+    "max_range": 5,
+    "base_casting_time": 0,
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ]
+  },
+  {
+    "type": "SPELL",
+    "id": "cyan_cold_air2",
+    "name": { "str": "Emit Cold Air 2" },
+    "description": "Emits very cold air",
+    "effect": "emit",
+    "effect_str": "emit_cold_air2",
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "min_range": 5,
     "max_range": 5,
     "base_casting_time": 0,
     "flags": [ "SILENT", "NO_EXPLOSION_SFX" ]
