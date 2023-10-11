@@ -13,9 +13,12 @@
       { "monster": "mon_sc_blue_slime", "weight": 30 },
       { "monster": "mon_sc_yellow_slime", "weight": 30, "cost_multiplier": 2, "starts": "2 days" },
       { "monster": "mon_sc_pink_slime", "weight": 50, "cost_multiplier": 3, "starts": "8 days" },
-      { "monster": "mon_sc_transparent_slime", "weight": 20 },
-      { "monster": "mon_sc_dasher_slime", "weight": 20 },
-      { "monster": "mon_sc_dasher_slime", "weight": 3, "cost_multiplier": 2, "pack_size": [ 2, 7 ] }
+      { "monster": "mon_sc_transparent_slime", "weight": 30 },
+      { "monster": "mon_sc_dasher_slime", "weight": 30 },
+      { "monster": "mon_sc_dasher_slime", "weight": 3, "cost_multiplier": 2, "pack_size": [ 2, 7 ] },
+      { "monster": "mon_sc_black_slime", "weight": 10 },
+      { "monster": "mon_sc_black_slime", "weight": 20, "conditions": [ "NIGHT" ] },
+      { "monster": "mon_sc_black_slime", "weight": 5, "conditions": [ "NIGHT" ], "cost_multiplier": 2, "pack_size": [ 1, 7 ] }
     ]
   },
   {
@@ -33,7 +36,10 @@
       { "monster": "mon_sc_pink_slime_large", "weight": 50, "cost_multiplier": 3, "starts": "8 days" },
       { "monster": "mon_sc_transparent_slime_large", "weight": 20 },
       { "monster": "mon_sc_dasher_slime_large", "weight": 20 },
-      { "monster": "mon_sc_dasher_slime_large", "weight": 3, "cost_multiplier": 2, "pack_size": [ 2, 7 ] }
+      { "monster": "mon_sc_dasher_slime_large", "weight": 3, "cost_multiplier": 2, "pack_size": [ 2, 7 ] },
+      { "monster": "mon_sc_black_slime_large", "weight": 10 },
+      { "monster": "mon_sc_black_slime_large", "weight": 20, "conditions": [ "NIGHT" ] },
+      { "monster": "mon_sc_black_slime_large", "weight": 5, "conditions": [ "NIGHT" ], "cost_multiplier": 2, "pack_size": [ 1, 7 ] }
     ]
   },
   {
@@ -64,7 +70,7 @@
       { "monster": "mon_sc_slime_large", "weight": 13, "cost_multiplier": 3 },
       { "monster": "mon_sc_slime_large", "weight": 4, "cost_multiplier": 6, "pack_size": [ 2, 4 ] },
       { "group": "GROUP_SLIME_SPECIAL", "weight": 18, "starts": "6 hours" },
-      { "group": "GROUP_LARGE_SLIME_SPECIAL", "weight": 3, "cost_multiplier": 3, "starts": "6 hours" }
+      { "group": "GROUP_LARGE_SLIME_SPECIAL", "weight": 2, "cost_multiplier": 3, "starts": "6 hours" }
     ]
   },
   {
