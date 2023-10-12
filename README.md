@@ -24,6 +24,8 @@ If you discover a bug or have a feature request, feel free to [open an issue](ht
 - Transparent slime - It's so transparent that it's hard to see from a distance (becomes invisible beyond a certain distance depending on Perception)
 - Dasher slime - Occasionally dashes forward quickly towards a target
 - Black slime - It absorbs light, making it almost invisible in the dark unless adjacent
-- Dissolver slime - Attempts to wrap around its target, then secrete a highly acidic chemical 
+- Dissolver slime - Attempts to wrap around its target, then secrete a highly acidic chemical
+- Speedy slime - It is very fast and has a higher dodge
+- Queen slime - A gigantic slime that can spawn new slimes, and may try to cover its target in slime as well.
 
 In addition, each type has a large variant. The large variants are larger and tougher, and they split into two of the normal-sized variants on death.
