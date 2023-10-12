@@ -79,9 +79,10 @@
     "type": "monstergroup",
     "name": "GROUP_FOREST",
     "monsters": [
-      { "monster": "mon_sc_slime", "weight": 50, "cost_multiplier": 0 },
-      { "monster": "mon_sc_slime", "weight": 5, "cost_multiplier": 2, "pack_size": [ 3, 6 ] },  
-      { "monster": "mon_sc_slime_large", "weight": 2, "cost_multiplier": 2 }
+      { "monster": "mon_sc_slime", "weight": 100, "cost_multiplier": 0 },
+      { "monster": "mon_sc_slime", "weight": 25, "cost_multiplier": 2, "pack_size": [ 3, 6 ] },  
+      { "monster": "mon_sc_slime_large", "weight": 10, "cost_multiplier": 2 },
+      { "monster": "mon_sc_queen_slime", "weight": 1, "cost_multiplier": 4, "starts": "20 days" }
     ]
   }
 ]

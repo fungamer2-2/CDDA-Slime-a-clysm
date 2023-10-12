@@ -38,7 +38,7 @@
     "armor_stab": 3,
     "armor_acid": 0,
     "armor_elec": 2,
-    "bleed_rate": 25
+    "bleed_rate": 30
   },
   {
     "type": "MONSTER",
@@ -48,7 +48,6 @@
     "description": "A red gelatinous slime, gradually moving across the ground. Its damage appears to somehow heal itself.",
     "copy-from": "mon_sc_slime",
     "regenerates": 5,
-    "bleed_rate": 15,
     "color": "red"
   },
   {
@@ -56,7 +55,7 @@
     "id": "mon_sc_orange_slime",
     "name": "orange slime",
     "//": "orange slimes are 50% faster and have +1 more dodge",
-    "description": "An orange gelatinous slime, gradually moving across the ground. It seems to move fast, for a slime creature.",
+    "description": "An orange gelatinous slime, gradually moving across the ground. It seems to move faster than a normal slime.",
     "copy-from": "mon_sc_slime",
     "color": "light_red",
     "proportional": { "speed": 1.5 },
@@ -161,7 +160,6 @@
     "description": "A pink gelatinous slime, gradually moving across the ground. It has the ability to heal nearby slimes.",
     "copy-from": "mon_sc_slime",
     "regenerates": 8,
-    "bleed_rate": 10,
     "color": "pink",
     "special_attacks": [
       {
@@ -256,11 +254,21 @@
         "damage_max_instance": [ { "damage_type": "acid", "amount": 2, "armor_penetration": 8 } ],
         "effects": [ { "id": "dissolving", "duration": [ 2, 4 ] } ],
         "hit_dmg_u": "%s secretes a dissolving chemical onto you!",
-        "hit_dmg_npc": "secretes a dissolving chemical onto <nocname>!",
+        "hit_dmg_npc": "%s secretes a dissolving chemical onto <npcname>!",
         "no_dmg_msg_u": "%s secretes a chemical, but it washes off your armor!",
         "no_dmg_msg_npc": "%s secretes a chemical onto <npcname>, but it washes off their armor!"
       }
     ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_speedy_slime",
+    "name": "speedy slime",
+    "description": "A purplish gelatinous slime, sliding across the ground much more quickly and easily than a normal slime.",
+    "copy-from": "mon_sc_slime",
+    "color": "magenta",
+    "proportional": { "speed": 3, "attack_cost": 1.5 },
+    "relative": { "dodge": 3 }
   },
   {
     "type": "MONSTER",
@@ -270,7 +278,6 @@
     "proportional": { "hp": 2.0, "volume": 2.0, "speed": 1.25, "attack_cost": 1.25 },
     "description": "A large green gelatinous slime, gradually moving across the ground.",
     "melee_skill": 5,
-    "dodge": 0,
     "melee_dice": 3,
     "melee_dice_sides": 3,
     "armor_bash": 4,
@@ -292,7 +299,6 @@
     "description": "A large red gelatinous slime, gradually moving across the ground. Its damage appears to somehow heal itself.",
     "copy-from": "mon_sc_slime_large",
     "regenerates": 10,
-    "bleed_rate": 15,
     "color": "red",
     "death_function": {
       "message": "The %s splits in two!",
@@ -434,7 +440,6 @@
     "description": "A large pink gelatinous slime, gradually moving across the ground. It has the ability to heal nearby slimes.",
     "copy-from": "mon_sc_slime_large",
     "regenerates": 16,
-    "bleed_rate": 10,
     "color": "pink",
     "special_attacks": [
       {
@@ -556,6 +561,51 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_dissolver", "hit_self": true }
+    }
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_queen_slime",
+    "name": "queen slime",
+    "copy-from": "mon_sc_slime_large",
+    "proportional": { "hp": 4.0, "volume": 4.0, "speed": 1.5 },
+    "description": "A large green gelatinous slime, gradually moving across the ground.",
+    "melee_skill": 7,
+    "armor_bash": 12,
+    "armor_stab": 12,
+    "armor_acid": 15,
+    "armor_elec": 8,
+    "armor_bullet": 25,
+    "extend": { "flags": [ "ACIDPROOF" ] },
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "attack_type": "melee",
+        "id": "cover_slime",
+        "cooldown": 10,
+        "attack_chance": 30,
+        "blockable": false,
+        "effects_require_dmg": false,
+        "damage_max_instance": [ { "damage_type": "bash", "amount": 0 } ],
+        "effects": [ { "id": "slimed", "duration": [ 5, 200 ] } ],
+        "no_dmg_msg_u": "%s covers you in slime, engulfing you in the substance!",
+        "no_dmg_msg_npc": "%s engulfs <npcname> in slime!",
+        "miss_msg_u": "%s attempts to engulf you in slime, but you dodge!",
+        "miss_msg_npc": "%s attempts to engulf <npcname> in slime, but they dodge!"
+      },
+      {
+        "type": "monster_attack",
+        "id": "summon_slime",
+        "attack_type": "spell",
+        "spell_data": { "id": "queen_summon_slime", "hit_self": true },
+        "cooldown": 40,
+        "monster_message": "%1$s spawns a new slime!"
+      }
+    ],
+    "death_function": {
+      "message": "The %s splits in two!",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_queen_split", "hit_self": true }
     }
   }
 ]
