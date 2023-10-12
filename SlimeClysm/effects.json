@@ -29,6 +29,21 @@
     "max_duration": "3 s"
   },
   {
+    "id": "slime_boosted",
+    "type": "effect_type",
+    "name": [ "Boosted" ],
+    "max_intensity": 20,
+    "max_duration": "5 m",
+    "base_mods": {
+      "speed_mod": [ 5 ]
+    },
+    "scaling_mods": {
+      "speed_mod": [ 5 ]
+    },
+    "int_dur_factor": "15 s",
+    "show_in_info": true
+  },
+  {
     "type": "effect_type",
     "id": "dissolving",
     "name": [ "Dissolving" ],

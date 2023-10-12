@@ -121,5 +121,41 @@
     "shape": "blast",
     "base_casting_time": 300,
     "flags": [ "SILENT", "NO_EXPLOSION_SFX", "HOSTILE_SUMMON", "PERMANENT", "SPAWN_WITH_DEATH_DROPS" ]
+  },
+  {
+    "id": "slime_boost_aoe",
+    "type": "SPELL",
+    "name": "Slime Boost Speed",
+    "description": "Give a speed boost to nearby slimes.",
+    "valid_targets": [ "self", "ally" ],
+    "targeted_monster_species": [ "SLIME" ],
+    "effect": "attack",
+    "effect_str": "slime_boosted",
+    "shape": "blast",
+    "min_duration": 3000,
+    "max_duration": 3000,
+    "min_range": 10,
+    "max_range": 10,
+    "min_aoe": 1,
+    "max_aoe": 2,
+    "flags": [ "SILENT", "RANDOM_AOE", "NO_EXPLOSION_SFX", "RANDOM_DAMAGE" ]
+  },
+  {
+    "id": "slime_boost_aoe_large",
+    "type": "SPELL",
+    "name": "Slime Boost Speed (large)",
+    "description": "Give a speed boost to nearby slimes.",
+    "valid_targets": [ "self", "ally" ],
+    "targeted_monster_species": [ "SLIME" ],
+    "effect": "attack",
+    "effect_str": "slime_boosted",
+    "shape": "blast",
+    "min_duration": 5000,
+    "max_duration": 5000,
+    "min_range": 10,
+    "max_range": 10,
+    "min_aoe": 2,
+    "max_aoe": 6,
+    "flags": [ "SILENT", "RANDOM_AOE", "NO_EXPLOSION_SFX", "RANDOM_DAMAGE" ]
   }
 ]

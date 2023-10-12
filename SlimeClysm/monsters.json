@@ -166,7 +166,7 @@
         "type": "monster_attack",
         "id": "aoe_heal_slimes",
         "attack_type": "spell",
-        "spell_data": { "id": "slime_aoe_heal" },
+        "spell_data": { "id": "slime_aoe_heal", "hit_self": true },
         "cooldown": 8,
         "monster_message": "%1$s sends out an aura to heal its nearby allies!"
       }
@@ -269,6 +269,24 @@
     "color": "magenta",
     "proportional": { "speed": 3, "attack_cost": 1.5 },
     "relative": { "dodge": 3 }
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_booster_slime",
+    "name": "booster slime",
+    "description": "A blue gelatinous slime, with orange stripes across its surface, gradually moving across the ground. It seems to be able to boost the spoed of nearby slimes.",
+    "copy-from": "mon_sc_slime",
+    "color": "blue",
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "id": "slime_boost_aoe",
+        "attack_type": "spell",
+        "spell_data": { "id": "slime_boost_aoe", "hit_self": true },
+        "cooldown": 10,
+        "monster_message": "%1$s boosts the speed of itself and its nearby allies!"
+      }
+    ]
   },
   {
     "type": "MONSTER",
@@ -446,7 +464,7 @@
         "type": "monster_attack",
         "id": "large_slime_aoe_heal",
         "attack_type": "spell",
-        "spell_data": { "id": "large_slime_aoe_heal" },
+        "spell_data": { "id": "large_slime_aoe_heal", "hit_self": true },
         "cooldown": 8,
         "monster_message": "%1$s sends out an aura to heal its nearby allies!"
       }
@@ -565,6 +583,21 @@
   },
   {
     "type": "MONSTER",
+    "id": "mon_sc_speedy_slime_large",
+    "name": "large speedy slime",
+    "description": "A large purplish gelatinous slime, sliding across the ground much more quickly and easily than a normal slime.",
+    "copy-from": "mon_sc_slime_large",
+    "color": "magenta",
+    "proportional": { "speed": 3.5, "attack_cost": 1.5 },
+    "relative": { "dodge": 3 },
+    "death_function": {
+      "message": "The %s splits in two!",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_large_slime_split_speedy", "hit_self": true }
+    }
+  },
+  {
+    "type": "MONSTER",
     "id": "mon_sc_queen_slime",
     "name": "queen slime",
     "copy-from": "mon_sc_slime_large",
@@ -606,6 +639,29 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_queen_split", "hit_self": true }
+    }
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_booster_slime_large",
+    "name": "large booster slime",
+    "description": "A large blue gelatinous slime, with orange stripes across its surface, gradually moving across the ground. It seems to be able to boost the spoed of nearby slimes.",
+    "copy-from": "mon_sc_slime_large",
+    "color": "blue",
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "id": "slime_boost_aoe_large",
+        "attack_type": "spell",
+        "spell_data": { "id": "slime_boost_aoe_large", "hit_self": true },
+        "cooldown": 10,
+        "monster_message": "%1$s boosts the speed of itself and its nearby allies!"
+      }
+    ],
+    "death_function": {
+      "message": "The %s splits in two!",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_large_slime_split_booster", "hit_self": true }
     }
   }
 ]
