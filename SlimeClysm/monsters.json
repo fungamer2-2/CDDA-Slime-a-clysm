@@ -569,7 +569,7 @@
     "name": "queen slime",
     "copy-from": "mon_sc_slime_large",
     "proportional": { "hp": 4.0, "volume": 4.0, "speed": 1.5 },
-    "description": "A large green gelatinous slime, gradually moving across the ground.",
+    "description": "A gigantic green gelatinous slime, gradually moving across the ground. It occasionally spawns new slimes from its body.",
     "melee_skill": 7,
     "armor_bash": 12,
     "armor_stab": 12,
