@@ -218,6 +218,52 @@
   },
   {
     "type": "MONSTER",
+    "id": "mon_sc_dissolver_slime",
+    "name": "dissolver slime",
+    "description": "A black gelatinous slime, gradually moving across the ground. It appears to secrete a highly acidic chemical.",
+    "copy-from": "mon_sc_slime",
+    "color": "dark_gray",
+    "grab_strength": 3,
+    "//": "Note: Grabs have been reworked in 0.H experimental, so the value of grab_strength will need to be changed to reflect that.",
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "attack_type": "melee",
+        "id": "wrap",
+        "cooldown": 5,
+        "accuracy": 4,
+        "blockable": false,
+        "effects_require_dmg": false,
+        "damage_max_instance": [ { "damage_type": "bash", "amount": 0 } ],
+        "self_effects_always": [ { "id": "grabbing", "duration": 86400 } ],
+        "effects": [ { "id": "grabbed", "duration": 86400, "intensity": 3, "affect_hit_bp": true } ],
+        "body_parts": [ [ "torso", 1 ] ],
+        "forbidden_effects_any": [ "grabbing" ],
+        "no_dmg_msg_u": "%s wraps around you!",
+        "no_dmg_msg_npc": "%s wraps around <npcname>!",
+        "miss_msg_u": "%s tries to wrap around you, but you dodge!",
+        "miss_msg_npc": "%s tries to wrap around <npcname>, but they dodge!"
+      },
+      {
+        "type": "monster_attack",
+        "attack_type": "melee",
+        "id": "dissolve",
+        "cooldown": 2,
+        "dodgeable": false,
+        "blockable": false,
+        "move_cost": 40,
+        "required_effects_any": [ "grabbing" ],
+        "damage_max_instance": [ { "damage_type": "acid", "amount": 2, "armor_penetration": 8 } ],
+        "effects": [ { "id": "dissolving", "duration": [ 2, 4 ] } ],
+        "hit_dmg_u": "%s secretes a dissolving chemical onto you!",
+        "hit_dmg_npc": "secretes a dissolving chemical onto <nocname>!",
+        "no_dmg_msg_u": "%s secretes a chemical, but it washes off your armor!",
+        "no_dmg_msg_npc": "%s secretes a chemical onto <npcname>, but it washes off their armor!"
+      }
+    ]
+  },
+  {
+    "type": "MONSTER",
     "id": "mon_sc_slime_large",
     "name": "large slime",
     "copy-from": "mon_sc_slime",
@@ -426,7 +472,7 @@
     "id": "mon_sc_dasher_slime_large",
     "name": "large dasher slime",
     "description": "A large orange gelatinous slime, with blue-colored stripes across its surface, gradually moving across the ground, and every so often appears to dash quickly towards its target for a brief moment.",
-    "copy-from": "mon_sc_slime",
+    "copy-from": "mon_sc_slime_large",
     "color": "light_red_cyan",
     "special_attacks": [
       {
@@ -450,8 +496,8 @@
     "type": "MONSTER",
     "id": "mon_sc_black_slime_large",
     "name": "large black slime",
-    "description": "A black gelatinous slime, gradually moving across the ground. It's so dark, it absorbs light from its surroundings, making it difficult to see at night.",
-    "copy-from": "mon_sc_slime",
+    "description": "A large black gelatinous slime, gradually moving across the ground. It's so dark, it absorbs light from its surroundings, making it difficult to see at night.",
+    "copy-from": "mon_sc_slime_large",
     "color": "black",
     "vision_night": 8,
     "extend": { "flags": [ "NIGHT_INVISIBILITY" ] },
@@ -459,6 +505,57 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_black", "hit_self": true }
+    }
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_dissolver_slime_large",
+    "name": "large dissolver slime",
+    "description": "A large black gelatinous slime, gradually moving across the ground. It appears to secrete a highly acidic chemical.",
+    "copy-from": "mon_sc_slime_large",
+    "color": "dark_gray",
+    "grab_strength": 6,
+    "//": "Note: Grabs have been reworked in 0.H experimental, so the value of grab_strength will need to be changed to reflect that.",
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "attack_type": "melee",
+        "id": "wrap2",
+        "cooldown": 5,
+        "accuracy": 6,
+        "blockable": false,
+        "effects_require_dmg": false,
+        "damage_max_instance": [ { "damage_type": "bash", "amount": 0 } ],
+        "self_effects_always": [ { "id": "grabbing", "duration": 86400 } ],
+        "effects": [ { "id": "grabbed", "duration": 86400, "intensity": 6, "affect_hit_bp": true } ],
+        "body_parts": [ [ "torso", 1 ] ],
+        "forbidden_effects_any": [ "grabbing" ],
+        "no_dmg_msg_u": "%s wraps around you!",
+        "no_dmg_msg_npc": "%s wraps around <npcname>!",
+        "miss_msg_u": "%s tries to wrap around you, but you dodge!",
+        "miss_msg_npc": "%s tries to wrap around <npcname>, but they dodge!"
+      },
+      {
+        "type": "monster_attack",
+        "attack_type": "melee",
+        "id": "dissolve2",
+        "cooldown": 2,
+        "dodgeable": false,
+        "blockable": false,
+        "move_cost": 40,
+        "required_effects_any": [ "grabbing" ],
+        "damage_max_instance": [ { "damage_type": "acid", "amount": 2, "armor_penetration": 8 } ],
+        "effects": [ { "id": "dissolving", "duration": [ 2, 8 ] } ],
+        "hit_dmg_u": "%s secretes a dissolving chemical onto you!",
+        "hit_dmg_npc": "secretes a dissolving chemical onto <nocname>!",
+        "no_dmg_msg_u": "%s secretes a chemical, but it washes off your armor!",
+        "no_dmg_msg_npc": "%s secretes a chemical onto <npcname>, but it washes off their armor!"
+      }
+    ],
+    "death_function": {
+      "message": "The %s splits in two!",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_large_slime_split_dissolver", "hit_self": true }
     }
   }
 ]
