@@ -137,7 +137,7 @@
     "min_range": 10,
     "max_range": 10,
     "min_aoe": 1,
-    "max_aoe": 2,
+    "max_aoe": 3,
     "flags": [ "SILENT", "RANDOM_AOE", "NO_EXPLOSION_SFX", "RANDOM_DAMAGE" ]
   },
   {

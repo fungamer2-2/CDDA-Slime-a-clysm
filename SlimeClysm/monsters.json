@@ -13,6 +13,7 @@
     "dodge": 1,
     "phase": "LIQUID",
     "harvest": "exempt",
+    "aggression": 70,
     "vision_day": 20,
     "vision_night": 5,
     "melee_damage": [ { "damage_type": "cut", "amount": 0 } ],
@@ -29,7 +30,6 @@
     "weight": "57500 g",
     "hp": 70,
     "speed": 50,
-    "aggression": 100,
     "morale": 100,
     "melee_skill": 3,
     "melee_dice": 2,
@@ -290,10 +290,40 @@
   },
   {
     "type": "MONSTER",
+    "id": "mon_sc_slime_biter",
+    "name": "slime biter",
+    "//": "These are very fasg and aggressive, will attempt to bite",
+    "description": "This red slime is small, but very fast and aggressive. It chases quickly after you, in an attempt to use its sharp teeth to bite you.",
+    "copy-from": "mon_sc_slime",
+    "color": "red_yellow",
+    "symbol": "c",
+    "proportional": { "volume": 0.25, "weight": 0.25 },
+    "speed": 350,
+    "attack_cost": 350,
+    "melee_skill": 6,
+    "aggression": 100,
+    "special_attacks": [ 
+      { 
+        "type": "bite", 
+        "cooldown": 3,
+        "hitsize_min": 4,
+        "infection_chance": 2,
+        "damage_max_instance": [ { "damage_type": "stab", "amount": 8, "armor_penetration": 2 } ],
+        "hit_dmg_u": "%1$s lunges at you and bites your %2$s!",
+        "hit_dmg_npc": "%1$s lunges at and bites <npcname>!",
+        "miss_msg_u": "%1$s lunges for your %2$s, but you dodge!",
+        "miss_msg_npc": "%1$s lunges at <npcname>, but they dodge!",
+        "no_dmg_msg_u": "%1$s lunges at you and tries to bite your %2$s, but fails to penetrate armor!",
+        "no_dmg_msg_npc": "%1$s lunges at <npcname> and tries to bite, but fails to penetrate armor!"
+      } 
+    ]
+  },
+  {
+    "type": "MONSTER",
     "id": "mon_sc_slime_large",
     "name": "large slime",
     "copy-from": "mon_sc_slime",
-    "proportional": { "hp": 2.0, "volume": 2.0, "speed": 1.25, "attack_cost": 1.25 },
+    "proportional": { "hp": 2.0, "volume": 2.0, "weight": 2.0, "speed": 1.25, "attack_cost": 1.25 },
     "description": "A large green gelatinous slime, gradually moving across the ground.",
     "melee_skill": 5,
     "melee_dice": 3,
@@ -601,7 +631,7 @@
     "id": "mon_sc_queen_slime",
     "name": "queen slime",
     "copy-from": "mon_sc_slime_large",
-    "proportional": { "hp": 4.0, "volume": 4.0, "speed": 1.5 },
+    "proportional": { "hp": 4.0, "volume": 4.0, "weight": 4.0, "speed": 1.5 },
     "description": "A gigantic green gelatinous slime, gradually moving across the ground. It occasionally spawns new slimes from its body.",
     "melee_skill": 7,
     "armor_bash": 12,
@@ -663,5 +693,16 @@
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_booster", "hit_self": true }
     }
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_friendly_slime",
+    "name": "friendly slime",
+    "description": "This slime has recognized you as a friend, and stays by to protect you.",
+    "copy-from": "mon_sc_slime",
+    "default_faction": "player",
+    "speed": 70,
+    "regenerates": 1,
+    "tracking_distance": 3
   }
 ]
