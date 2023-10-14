@@ -53,7 +53,7 @@
       { "monster": "mon_sc_slime", "weight": 3, "cost_multiplier": 4, "pack_size": [ 5, 15 ] },
       { "monster": "mon_sc_slime_large", "weight": 15, "cost_multiplier": 3 },
       { "group": "GROUP_SLIME_SPECIAL", "weight": 35 },
-      { "group": "GROUP_LARGE_SLIME_SPECIAL", "weight": 5, "cost_multiplier": 3 }
+      { "group": "GROUP_LARGE_SLIME_SPECIAL", "weight": 5, "cost_multiplier": 3 },
       { "monster": "mon_sc_slime_biter", "weight": 20, "starts": "2 days" }
     ]
   },
