@@ -19,7 +19,8 @@
       { "monster": "mon_sc_black_slime", "weight": 10 },
       { "monster": "mon_sc_black_slime", "weight": 20, "conditions": [ "NIGHT" ] },
       { "monster": "mon_sc_black_slime", "weight": 4, "conditions": [ "NIGHT" ], "cost_multiplier": 2, "pack_size": [ 2, 7 ] },
-      { "monster": "mon_sc_dissolver_slime", "weight": 35, "starts": "2 days" }
+      { "monster": "mon_sc_dissolver_slime", "weight": 35, "starts": "2 days" },
+      { "monster": "mon_sc_rubber_slime", "weight": 30, "starts": "3 days" }
     ]
   },
   {

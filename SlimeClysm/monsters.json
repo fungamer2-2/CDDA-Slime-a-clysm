@@ -320,6 +320,23 @@
   },
   {
     "type": "MONSTER",
+    "id": "mon_sc_rubber_slime",
+    "name": "rubber slime",
+    "description": "A rubbery slime, slowly moving across the ground. It seems a lot more durable than usual.",
+    "copy-from": "mon_sc_slime",
+    "material": [ "rubber", "slime" ],
+    "color": "pink",
+    "proportional": { "speed": 0.5, "attack_cost": 0.5 },
+    "armor_bash": 50,
+    "armor_cut": 8,
+    "armor_stab": 10,
+    "armor_bullet": 50,
+    "armor_acid": 0,
+    "armor_elec": 100,
+    "bleed_rate": 0
+  },
+  {
+    "type": "MONSTER",
     "id": "mon_sc_slime_large",
     "name": "large slime",
     "copy-from": "mon_sc_slime",
@@ -696,6 +713,23 @@
   },
   {
     "type": "MONSTER",
+    "id": "mon_sc_rubber_slime_large",
+    "name": "rubber slime",
+    "description": "A rubbery slime, slowly moving across the ground. It seems a lot more durable than usual.",
+    "copy-from": "mon_sc_slime_large",
+    "material": [ "rubber", "slime" ],
+    "color": "pink",
+    "proportional": { "speed": 0.5, "attack_cost": 0.5 },
+    "armor_bash": 70,
+    "armor_cut": 10,
+    "armor_stab": 12,
+    "armor_bullet": 75,
+    "armor_acid": 0,
+    "armor_elec": 200,
+    "bleed_rate": 0
+  },
+  {
+    "type": "MONSTER",
     "id": "mon_sc_friendly_slime",
     "name": "friendly slime",
     "description": "This slime has recognized you as a friend, and stays by to protect you.",
@@ -703,6 +737,11 @@
     "default_faction": "player",
     "speed": 70,
     "regenerates": 1,
-    "tracking_distance": 3
+    "tracking_distance": 3,
+    "melee_skill": 4,
+    "armor_bash": 3,
+    "armor_stab": 5,
+    "armor_acid": 3,
+    "armor_elec": 3
   }
 ]
