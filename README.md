@@ -28,5 +28,6 @@ If you discover a bug or have a feature request, feel free to [open an issue](ht
 - Speedy slime - It is very fast and has a higher dodge
 - Booster slime - can speed up itself and its allies
 - Queen slime - A gigantic slime that can spawn new slimes, and may try to cover its target in slime as well.
+- Slime biter - small, very fast and aggressive red slimes, will attempt to bite the target 
 
 In addition, each type has a large variant. The large variants are larger and tougher, and they split into two of the normal-sized variants on death.
