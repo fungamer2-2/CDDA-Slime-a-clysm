@@ -315,7 +315,7 @@
         "miss_msg_npc": "%1$s lunges at <npcname>, but they dodge!",
         "no_dmg_msg_u": "%1$s lunges at you and tries to bite your %2$s, but fails to penetrate armor!",
         "no_dmg_msg_npc": "%1$s lunges at <npcname> and tries to bite, but fails to penetrate armor!"
-      } 
+      }
     ]
   },
   {
