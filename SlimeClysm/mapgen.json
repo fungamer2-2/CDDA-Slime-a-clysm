@@ -55,7 +55,7 @@
     "see_cost": 2,
     "color": "light_green",
     "sym": "F",
-    "mondensity": 2,
+    "mondensity": 1,
     "flags": [ "RISK_HIGH" ]
   },
   {
