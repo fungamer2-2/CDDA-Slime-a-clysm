@@ -88,5 +88,13 @@
       { "monster": "mon_sc_slime_large", "weight": 10, "cost_multiplier": 2 },
       { "monster": "mon_sc_queen_slime", "weight": 1, "cost_multiplier": 4, "starts": "20 days" }
     ]
+  },
+  {
+    "type": "monstergroup",
+    "name": "GROUP_AQUA_SLIME",
+    "monsters": [
+      { "monster": "mon_sc_aqua_slime", "weight": 85 },
+      { "monster": "mon_sc_aqua_slime_large", "weight": 15 }
+    ]
   }
 ]

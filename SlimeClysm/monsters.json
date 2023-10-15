@@ -83,8 +83,8 @@
         "hit_dmg_npc": "%1$s sends an electric current into <npcname>!",
         "miss_msg_u": "%1$s tries to send an electric current at you, but you dodge!",
         "miss_msg_npc": "%1$s tries to send an electric current at <npcname>, but they dodge!",
-        "no_dmg_u": "%1$s sends an electric current at you, but it reflects off your armor.",
-        "no_dmg_npc": "%1$s sends an electric current at <npcname>, but it reflects off their armor."
+        "no_dmg_msg_u": "%1$s sends an electric current at you, but it reflects off your armor.",
+        "no_dmg_msg_npc": "%1$s sends an electric current at <npcname>, but it reflects off their armor."
       }
     ]
   },
@@ -320,6 +320,16 @@
   },
   {
     "type": "MONSTER",
+    "id": "mon_sc_aqua_slime",
+    "name": "aqua slime",
+    "description": "An aqueous slime, often found near bodies of water.",
+    "copy-from": "mon_sc_slime",
+    "color": "cyan",
+    "relative": { "dodge": 1 },
+    "extend": { "flags": [ "SWIMS", "WATER_CAMOUFLAGE" ] }
+  },
+  {
+    "type": "MONSTER",
     "id": "mon_sc_rubber_slime",
     "name": "rubber slime",
     "description": "A rubbery slime, slowly moving across the ground. It seems a lot more durable than usual.",
@@ -409,8 +419,8 @@
         "hit_dmg_npc": "%1$s sends a strong electric current into <npcname>!",
         "miss_msg_u": "%1$s tries to send an electric current at you, but you dodge!",
         "miss_msg_npc": "%1$s tries to send an electric current at <npcname>, but they dodge!",
-        "no_dmg_u": "%1$s sends an electric current at you, but it reflects off your armor.",
-        "no_dmg_npc": "%1$s sends an electric current at <npcname>, but it reflects off their armor."
+        "no_dmg_msg_u": "%1$s sends an electric current at you, but it reflects off your armor.",
+        "no_dmg_msg_npc": "%1$s sends an electric current at <npcname>, but it reflects off their armor."
       }
     ],
     "death_function": {
@@ -714,8 +724,8 @@
   {
     "type": "MONSTER",
     "id": "mon_sc_rubber_slime_large",
-    "name": "rubber slime",
-    "description": "A rubbery slime, slowly moving across the ground. It seems a lot more durable than usual.",
+    "name": "large rubber slime",
+    "description": "A large rubbery slime, slowly moving across the ground. It seems a lot more durable than usual.",
     "copy-from": "mon_sc_slime_large",
     "material": [ "rubber", "slime" ],
     "color": "pink",
@@ -726,7 +736,27 @@
     "armor_bullet": 75,
     "armor_acid": 0,
     "armor_elec": 200,
-    "bleed_rate": 0
+    "bleed_rate": 0,
+    "death_function": {
+      "message": "The %s splits in two!",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_large_slime_split_rubber", "hit_self": true }
+    }
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_aqua_slime_large",
+    "name": "large aqua slime",
+    "description": "An aqueous slime, often found near bodies of water.",
+    "copy-from": "mon_sc_slime_large",
+    "color": "cyan",
+    "relative": { "dodge": 1 },
+    "extend": { "flags": [ "SWIMS", "WATER_CAMOUFLAGE" ] },
+    "death_function": {
+      "message": "The %s splits in two!",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_large_slime_split_aqua", "hit_self": true }
+    }
   },
   {
     "type": "MONSTER",
