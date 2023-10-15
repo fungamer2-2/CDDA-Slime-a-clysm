@@ -3,13 +3,13 @@
     "id": "emit_blue_disorient_gas",
     "type": "emit",
     "field": "fd_disorient_cloud",
-    "qty": 15
+    "qty": 18
   },
   {
     "id": "emit_blue_disorient_gas2",
     "type": "emit",
     "field": "fd_disorient_cloud",
-    "qty": 22,
+    "qty": 25,
     "intensity": 2
   },
   {

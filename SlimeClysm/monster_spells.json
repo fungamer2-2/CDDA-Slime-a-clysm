@@ -37,8 +37,8 @@
     "effect_str": "emit_cold_air",
     "valid_targets": [ "self" ],
     "shape": "blast",
-    "min_range": 5,
-    "max_range": 5,
+    "min_range": 1,
+    "max_range": 1,
     "base_casting_time": 0,
     "flags": [ "SILENT", "NO_EXPLOSION_SFX" ]
   },
@@ -51,8 +51,8 @@
     "effect_str": "emit_cold_air2",
     "valid_targets": [ "self" ],
     "shape": "blast",
-    "min_range": 5,
-    "max_range": 5,
+    "min_range": 1,
+    "max_range": 1,
     "base_casting_time": 0,
     "flags": [ "SILENT", "NO_EXPLOSION_SFX" ]
   },
@@ -154,7 +154,7 @@
     "max_duration": 5000,
     "min_range": 10,
     "max_range": 10,
-    "min_aoe": 2,
+    "min_aoe": 1,
     "max_aoe": 6,
     "flags": [ "SILENT", "RANDOM_AOE", "NO_EXPLOSION_SFX", "RANDOM_DAMAGE" ]
   }

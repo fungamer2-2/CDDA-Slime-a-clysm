@@ -42,7 +42,7 @@
           "monster": "GROUP_SLIME_FOREST",
           "x": [ 0, 23 ], "y": [ 0, 23 ],
           "chance": 2, 
-          "repeat": 6,
+          "repeat": 4,
           "spawn_data": { "patrol": [ { "x": [ 0, 23 ], "y": [ 0, 23 ] } ] }
         }
       ]
@@ -74,8 +74,8 @@
     ],
     "locations": [ "forest" ],
     "city_distance": [ 1, -1 ],
-    "occurrences": [ 0, 40 ],
-    "flags": [ "WILDERNESS" ]
+    "occurrences": [ 0, 15 ],
+    "flags": [ "WILDERNESS", "BLOB" ]
   },
   {
     "type": "mapgen",

@@ -8,7 +8,7 @@
     "bodytype": "blob",
     "species": [ "SLIME" ],
     "material": [ "slime" ],
-    "symbol": "O",
+    "symbol": "0",
     "color": "green",
     "dodge": 1,
     "phase": "LIQUID",
@@ -122,10 +122,10 @@
       {
         "type": "monster_attack",
         "id": "blue_gas",
-        "spell_data": { "id": "blue_gas_emitter" },
+        "spell_data": { "id": "blue_gas_emitter", "hit_self": true },
         "attack_type": "spell",
+        "cooldown": 6,
         "allow_no_target": true,
-        "cooldown": 7,
         "monster_message": "%1$s releases a cloud of blue gas!"
       }
     ]
@@ -353,6 +353,7 @@
     "copy-from": "mon_sc_slime",
     "proportional": { "hp": 2.0, "volume": 2.0, "weight": 2.0, "speed": 1.25, "attack_cost": 1.25 },
     "description": "A large green gelatinous slime, gradually moving across the ground.",
+    "symbol": "O",
     "melee_skill": 5,
     "melee_dice": 3,
     "melee_dice_sides": 3,
@@ -666,20 +667,22 @@
     "armor_stab": 12,
     "armor_acid": 15,
     "armor_elec": 8,
-    "armor_bullet": 25,
+    "armor_bullet": 20,
+    "symbol": "Q",
     "extend": { "flags": [ "ACIDPROOF" ] },
     "special_attacks": [
       {
         "type": "monster_attack",
         "attack_type": "melee",
-        "id": "cover_slime",
+        "id": "slime_engulf",
         "cooldown": 10,
-        "attack_chance": 30,
+        "attack_chance": 40,
+        "accuracy": 8,
         "blockable": false,
         "effects_require_dmg": false,
         "damage_max_instance": [ { "damage_type": "bash", "amount": 0 } ],
-        "effects": [ { "id": "slimed", "duration": [ 5, 200 ] } ],
-        "no_dmg_msg_u": "%s covers you in slime, engulfing you in the substance!",
+        "effects": [ { "id": "slimed", "duration": [ 10, 400 ] } ],
+        "no_dmg_msg_u": "%s engulfs you in slime!",
         "no_dmg_msg_npc": "%s engulfs <npcname> in slime!",
         "miss_msg_u": "%s attempts to engulf you in slime, but you dodge!",
         "miss_msg_npc": "%s attempts to engulf <npcname> in slime, but they dodge!"
@@ -689,8 +692,8 @@
         "id": "summon_slime",
         "attack_type": "spell",
         "spell_data": { "id": "queen_summon_slime", "hit_self": true },
-        "cooldown": 40,
-        "monster_message": "%1$s spawns a new slime!"
+        "cooldown": 30,
+        "monster_message": "%1$s strains for a moment, then spawns a new slime!"
       }
     ],
     "death_function": {
