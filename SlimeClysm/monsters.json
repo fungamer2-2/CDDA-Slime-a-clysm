@@ -325,6 +325,7 @@
     "description": "An aqueous slime, often found near bodies of water.",
     "copy-from": "mon_sc_slime",
     "color": "cyan",
+    "proportional": { "speed": 1.2 }, 
     "relative": { "dodge": 1 },
     "extend": { "flags": [ "SWIMS", "WATER_CAMOUFLAGE" ] }
   },
