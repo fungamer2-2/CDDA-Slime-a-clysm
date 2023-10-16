@@ -30,5 +30,6 @@ If you discover a bug or have a feature request, feel free to [open an issue](ht
 - Queen slime - A gigantic slime that can spawn new slimes, and may try to cover its target in slime as well.
 - Slime biter - small, very fast and aggressive red slimes, will attempt to bite the target
 - Rubber slime - very durable, highly resistant to bashing and bullet damage, practically immune to electric damage
+- Amoeba slime - spawns in large groups, sticks together, they may spawn more amoeba slimes (only when close to target to prevent exponential growth), defeating one of them deals some damage to surrounding amoeba slimes 
 
 In addition, each type has a large variant. The large variants are larger and tougher, and they split into two of the normal-sized variants on death.
