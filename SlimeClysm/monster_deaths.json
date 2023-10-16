@@ -238,5 +238,21 @@
     "effect_str": "mon_sc_aqua_slime",
     "shape": "blast",
     "flags": [ "SILENT", "NO_EXPLOSION_SFX", "HOSTILE_SUMMON", "PERMANENT", "SPAWN_WITH_DEATH_DROPS" ]
+  },
+  {
+    "id": "death_amoeba_slime",
+    "type": "SPELL",
+    "name": "Amoeba Slime Death",
+    "description": "The amoeba slime dies",
+    "valid_targets": [ "ally" ],
+    "targeted_monster_ids": [ "mon_sc_amoeba_slime" ],
+    "min_damage": 0,
+    "max_damage": 70,
+    "min_aoe": 1,
+    "max_aoe": 4,
+    "damage_type": "pure",
+    "effect": "attack",
+    "shape": "blast",
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "PERCENTAGE_DAMAGE", "RANDOM_DAMAGE", "RANDOM_AOE", "NO_PROJECTILE" ]
   }
 ]

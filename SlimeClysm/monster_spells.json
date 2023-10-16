@@ -157,5 +157,46 @@
     "min_aoe": 1,
     "max_aoe": 6,
     "flags": [ "SILENT", "RANDOM_AOE", "NO_EXPLOSION_SFX", "RANDOM_DAMAGE" ]
+  },
+  {
+    "id": "amoeba_slime_spawn",
+    "type": "SPELL",
+    "name": "Amoeba Slime Spawn",
+    "description": "",
+    "valid_targets": [ "hostile" ],
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_amoeba_spawn",
+    "min_range": 10,
+    "max_range": 10,
+    "message": "",
+    "shape": "blast",
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_amoeba_spawn",
+    "condition": {
+      "and": [
+        { "not": { "one_in_chance": 3 } },
+        { "compare_int": [ { "u_val": "pos_z" }, "==", { "npc_val": "pos_z" } ] },
+        { 
+          "or": [
+            { "and": [ "u_is_outside", "npc_is_outside" ] },
+            { "not": { "or": [ "u_is_outside", "npc_is_outside" ] } }
+          ]
+        },
+        { "compare_int": [ { "distance": [ "u", "npc" ] }, "<", { "arithmetic": [ { "const": 1 }, "+", { "rand": 4 } ] } ] }
+      ]
+    },
+    "effect": [
+      {
+        "npc_spawn_monster": "mon_sc_amoeba_slime",
+        "real_count": 1,
+        "min_radius": 1,
+        "max_radius": 1
+      }
+    ]
+    
+    
   }
 ]

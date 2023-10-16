@@ -96,5 +96,13 @@
       { "monster": "mon_sc_aqua_slime", "weight": 85 },
       { "monster": "mon_sc_aqua_slime_large", "weight": 15 }
     ]
+  },
+  {
+    "type": "monstergroup",
+    "name": "GROUP_AMEOBA",
+    "monsters": [
+      { "monster": "mon_sc_amoeba_slime", "weight": 100, "pack_size": [ 5, 15 ] },
+      { "monster": "mon_sc_amoeba_slime", "weight": 10, "pack_size": [ 10, 30 ] }
+    ]
   }
 ]

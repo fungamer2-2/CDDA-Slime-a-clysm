@@ -290,9 +290,37 @@
   },
   {
     "type": "MONSTER",
+    "id": "mon_sc_amoeba_slime",
+    "name": "amoeba slime",
+    "description": "A dark green gelatinous slime. This one seems to almost always be found in a group. They seem interconnected in such a way that killing one damages those around it.",
+    "copy-from": "mon_sc_slime",
+    "color": "green",
+    "proportional": { "speed": 0.4, "attack_cost": 0.4 },
+    "extend": { "flags": [ "SWARMS" ] },
+    "melee_skill": 2,
+    "melee_dice": 1,
+    "melee_sides": 3,
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "id": "amoeba_slime_spawn",
+        "attack_type": "spell",
+        "spell_data": { "id": "amoeba_slime_spawn" },
+        "cooldown": 6,
+        "monster_message": ""
+      }
+    ],
+    "death_function": {
+      "message": "As the amoeba slime dies, the nearby amoeba slimes appear weakened.",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_amoeba_slime", "hit_self": true }
+    }
+  },
+  {
+    "type": "MONSTER",
     "id": "mon_sc_slime_biter",
     "name": "slime biter",
-    "//": "These are very fasg and aggressive, will attempt to bite",
+    "//": "These are very fast and aggressive, will attempt to bite",
     "description": "This red slime is small, but very fast and aggressive. It chases quickly after you, in an attempt to use its sharp teeth to bite you.",
     "copy-from": "mon_sc_slime",
     "color": "red_yellow",
