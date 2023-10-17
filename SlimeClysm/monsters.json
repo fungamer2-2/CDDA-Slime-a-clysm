@@ -812,10 +812,10 @@
   },
   {
     "type": "MONSTER",
-    "id": "mon_sc_intelligent_slime",
+    "id": "mon_sc_intelligent_slime_large",
     "name": "intelligent slime",
-    "description": "This slime's brain appears to be a bit more evolved than usual. It appears more intelligent than the other slimes.",
-    "copy-from": "mon_sc_slime",
+    "description": "The brain of this large slime appears to be a bit more evolved than usual. It appears more intelligent than the other slimes.",
+    "copy-from": "mon_sc_slime_large",
     "proportional": { "speed": 1.25 },
     "relative": { "dodge": 1, "melee_skill": 1, "armor_bash": 1, "armor_stab": 1, "armor_acid": 2, "armor_elec": 2, "armor_bullet": 2 },
     "melee_dice_sides": 4,
