@@ -105,7 +105,7 @@
   },
   {
     "type": "monstergroup",
-    "name": "GROUP_AMEOBA",
+    "name": "GROUP_AMOEBA",
     "monsters": [
       { "monster": "mon_sc_amoeba_slime", "weight": 100, "pack_size": [ 5, 15 ] },
       { "monster": "mon_sc_amoeba_slime", "weight": 15, "pack_size": [ 10, 30 ] }
