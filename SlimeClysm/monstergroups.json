@@ -56,9 +56,11 @@
       { "monster": "mon_sc_slime", "weight": 5, "cost_multiplier": 3, "pack_size": [ 3, 6 ] }, 
       { "monster": "mon_sc_slime", "weight": 3, "cost_multiplier": 4, "pack_size": [ 5, 15 ] },
       { "monster": "mon_sc_slime_large", "weight": 35, "cost_multiplier": 3 },
+      { "monster": "mon_sc_intelligent_slime", "weight": 20, "cost_multiplier": 3, "starts": "6 days" },
+      { "monster": "mon_sc_intelligent_slime_large", "weight": 2, "cost_multiplier": 6, "starts": "6 days" },
       { "group": "GROUP_SLIME_SPECIAL", "weight": 35 },
       { "group": "GROUP_LARGE_SLIME_SPECIAL", "weight": 6, "cost_multiplier": 3 },
-      { "monster": "mon_sc_slime_biter", "weight": 18, "starts": "2 days" },
+      { "monster": "mon_sc_slime_biter", "weight": 18, "starts": "2 days" }
       
     ]
   },

@@ -376,6 +376,26 @@
   },
   {
     "type": "MONSTER",
+    "id": "mon_sc_intelligent_slime",
+    "name": "intelligent slime",
+    "description": "This slime's brain appears to be a bit more evolved than usual. It appears more intelligent than the other slimes.",
+    "copy-from": "mon_sc_slime",
+    "proportional": { "speed": 1.25 },
+    "relative": { "dodge": 1, "melee_skill": 1 },
+    "melee_dice_sides": 4,
+    "armor_bash": 3,
+    "armor_stab": 4,
+    "armor_acid": 2,
+    "armor_elec": 4,
+    "armor_bullet": 2,
+    "vision_day": 30,
+    "path_settings": { "max_dist": 30, "avoid_traps": true, "avoid_sharp": true },
+    "extend": {
+      "flags": [ "PATH_AVOID_DANGER_1", "SMELLS", "CLIMBS" ]
+    }
+  },
+  {
+    "type": "MONSTER",
     "id": "mon_sc_slime_large",
     "name": "large slime",
     "copy-from": "mon_sc_slime",
@@ -788,6 +808,21 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_aqua", "hit_self": true }
+    }
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_intelligent_slime",
+    "name": "intelligent slime",
+    "description": "This slime's brain appears to be a bit more evolved than usual. It appears more intelligent than the other slimes.",
+    "copy-from": "mon_sc_slime",
+    "proportional": { "speed": 1.25 },
+    "relative": { "dodge": 1, "melee_skill": 1, "armor_bash": 1, "armor_stab": 1, "armor_acid": 2, "armor_elec": 2, "armor_bullet": 2 },
+    "melee_dice_sides": 4,
+    "vision_day": 30,
+    "path_settings": { "max_dist": 30, "avoid_traps": true, "avoid_sharp": true },
+    "extend": {
+      "flags": [ "PATH_AVOID_DANGER_1", "SMELLS", "CLIMBS" ]
     }
   },
   {
