@@ -12,7 +12,7 @@
   {
     "type": "MONSTER_WHITELIST",
     "mode": "EXCLUSIVE",
-    "species": [ "SLIME" ]
+    "species": [ "SLIME", "GLOWSLIME" ]
   },
   {
     "type": "effect_on_condition",

@@ -240,6 +240,21 @@
     "flags": [ "SILENT", "NO_EXPLOSION_SFX", "HOSTILE_SUMMON", "PERMANENT", "SPAWN_WITH_DEATH_DROPS" ]
   },
   {
+    "id": "death_large_slime_split_intelligent",
+    "type": "SPELL",
+    "name": "Intelligent Slime Split (large)",
+    "description": "The large intelligent slime splits into two normal-sized booster slimes",
+    "valid_targets": [ "self", "ground" ],
+    "min_damage": 2,
+    "max_damage": 2,
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "effect": "summon",
+    "effect_str": "mon_sc_intelligent_slime",
+    "shape": "blast",
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "HOSTILE_SUMMON", "PERMANENT", "SPAWN_WITH_DEATH_DROPS" ]
+  },
+  {
     "id": "death_amoeba_slime",
     "type": "SPELL",
     "name": "Amoeba Slime Death",

@@ -1,0 +1,13 @@
+[
+  {
+    "type": "MONSTER_FACTION",
+    "name": "slime_leader",
+    "neutral": [ "slime" ]
+  },
+  {
+    "type": "MONSTER_FACTION",
+    "name": "slime",
+    "base_faction": "nether",
+    "friendly": [ "slime_leader" ]
+  }
+]

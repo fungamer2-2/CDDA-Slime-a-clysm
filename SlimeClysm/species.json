@@ -1,0 +1,9 @@
+[
+  {
+    "type": "SPECIES",
+    "id": "GLOWSLIME",
+    "description": "a slime",
+    "footsteps": "plop.",
+    "bleeds": "fd_glow_goo"
+  }
+]

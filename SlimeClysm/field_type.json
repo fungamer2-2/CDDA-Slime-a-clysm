@@ -79,5 +79,23 @@
     "display_items": false,
     "display_field": true,
     "looks_like": "fd_fog"
+  },
+  {
+    "id": "fd_glow_goo",
+    "type": "field_type",
+    "intensity_levels": [
+      { "name": "glowing goo trail", "color": "light_green", "light_emitted": 1 },
+      { "name": "glowing goo stain" },
+      { "name": "puddle of glowing goo", "color": "green" }
+    ],
+    "description_affix": "covered_in",
+    "decay_amount_factor": 2,
+    "apply_slime_factor": 10,
+    "is_splattering": true,
+    "half_life": "1 days",
+    "phase": "liquid",
+    "accelerated_decay": true,
+    "display_field": true,
+    "looks_like": "fd_slime"
   }
 ]

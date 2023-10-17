@@ -359,6 +359,16 @@
   },
   {
     "type": "MONSTER",
+    "id": "mon_sc_glowing_slime",
+    "species": [ "GLOWSLIME" ],
+    "name": "glowing slime",
+    "description": "A gelatinous slime that appears to glow in the dark while gradually moving across the ground.",
+    "copy-from": "mon_sc_slime",
+    "luminance": 3,
+    "bleeds": "fd_glow_goo"
+  },
+  {
+    "type": "MONSTER",
     "id": "mon_sc_rubber_slime",
     "name": "rubber slime",
     "description": "A rubbery slime, slowly moving across the ground. It seems a lot more durable than usual.",
@@ -381,7 +391,7 @@
     "description": "This slime's brain appears to be a bit more evolved than usual. It appears more intelligent than the other slimes.",
     "copy-from": "mon_sc_slime",
     "proportional": { "speed": 1.25 },
-    "relative": { "dodge": 1, "melee_skill": 1 },
+    "relative": { "dodge": 2, "melee_skill": 2, "armor_bash": 1, "armor_stab": 1, "armor_acid": 2, "armor_elec": 2, "armor_bullet": 2 },
     "melee_dice_sides": 4,
     "armor_bash": 3,
     "armor_stab": 4,
@@ -389,9 +399,9 @@
     "armor_elec": 4,
     "armor_bullet": 2,
     "vision_day": 30,
-    "path_settings": { "max_dist": 30, "avoid_traps": true, "avoid_sharp": true },
+    "path_settings": { "max_dist": 30, "avoid_traps": true, "avoid_sharp": true, "allow_open_doors": true },
     "extend": {
-      "flags": [ "PATH_AVOID_DANGER_1", "SMELLS", "CLIMBS" ]
+      "flags": [ "PATH_AVOID_DANGER_1", "SMELLS", "CLIMBS", "CAN_OPEN_DOORS" ]
     }
   },
   {
@@ -708,6 +718,7 @@
     "id": "mon_sc_queen_slime",
     "name": "queen slime",
     "copy-from": "mon_sc_slime_large",
+    "default_faction": "slime_leader",
     "proportional": { "hp": 4.0, "volume": 4.0, "weight": 4.0, "speed": 1.5 },
     "description": "A gigantic green gelatinous slime, gradually moving across the ground. It occasionally spawns new slimes from its body.",
     "melee_skill": 7,
@@ -729,11 +740,11 @@
         "blockable": false,
         "effects_require_dmg": false,
         "damage_max_instance": [ { "damage_type": "bash", "amount": 0 } ],
-        "effects": [ { "id": "slimed", "duration": [ 10, 400 ] } ],
+        "effects": [ { "id": "slimed", "duration": [ 10, 400 ] }, { "id": "blind", "duration": [ 3, 8 ] } ],
         "no_dmg_msg_u": "%s engulfs you in slime!",
         "no_dmg_msg_npc": "%s engulfs <npcname> in slime!",
-        "miss_msg_u": "%s attempts to engulf you in slime, but you dodge!",
-        "miss_msg_npc": "%s attempts to engulf <npcname> in slime, but they dodge!"
+        "miss_msg_u": "%s attempts to engulf you in slime, but you step out of the way!",
+        "miss_msg_npc": "%s attempts to engulf <npcname> in slime, but they quickly move aside!"
       },
       {
         "type": "monster_attack",
@@ -813,16 +824,36 @@
   {
     "type": "MONSTER",
     "id": "mon_sc_intelligent_slime_large",
-    "name": "intelligent slime",
-    "description": "The brain of this large slime appears to be a bit more evolved than usual. It appears more intelligent than the other slimes.",
+    "name": "large intelligent slime",
+    "description": "The brain of this large slime appears to be a bit more evolved than usual. Even its behavior seems more intelligent than the other slimes.",
     "copy-from": "mon_sc_slime_large",
     "proportional": { "speed": 1.25 },
-    "relative": { "dodge": 1, "melee_skill": 1, "armor_bash": 1, "armor_stab": 1, "armor_acid": 2, "armor_elec": 2, "armor_bullet": 2 },
+    "relative": { "dodge": 2, "melee_skill": 2, "armor_bash": 1, "armor_stab": 1, "armor_acid": 2, "armor_elec": 2, "armor_bullet": 2 },
     "melee_dice_sides": 4,
     "vision_day": 30,
     "path_settings": { "max_dist": 30, "avoid_traps": true, "avoid_sharp": true },
     "extend": {
       "flags": [ "PATH_AVOID_DANGER_1", "SMELLS", "CLIMBS" ]
+    },
+    "death_function": {
+      "message": "The %s splits in two!",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_large_slime_split_intelligent", "hit_self": true }
+    }
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_glowing_slime_large",
+    "species": [ "GLOWSLIME" ],
+    "name": "large glowing slime",
+    "description": "A large selatinous slime that appears to glow in the dark while gradually moving across the ground.",
+    "copy-from": "mon_sc_slime_large",
+    "luminance": 6,
+    "bleeds": "fd_glow_goo",
+    "death_function": {
+      "message": "The %s splits in two!",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_large_slime_split_glowing", "hit_self": true }
     }
   },
   {
@@ -833,6 +864,7 @@
     "copy-from": "mon_sc_slime",
     "default_faction": "player",
     "speed": 70,
+    "vision_day": 40,
     "regenerates": 1,
     "tracking_distance": 3,
     "melee_skill": 4,
