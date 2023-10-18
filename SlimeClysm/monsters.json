@@ -905,7 +905,7 @@
       }
     ],
     "extend": { "flags": [ "ACIDPROOF" ] }
-  }
+  },
   {
     "type": "MONSTER",
     "id": "mon_sc_friendly_slime",
