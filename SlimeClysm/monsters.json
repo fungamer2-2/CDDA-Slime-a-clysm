@@ -14,7 +14,7 @@
     "phase": "LIQUID",
     "harvest": "exempt",
     "aggression": 70,
-    "vision_day": 20,
+    "vision_day": 15,
     "vision_night": 5,
     "melee_damage": [ { "damage_type": "cut", "amount": 0 } ],
     "death_function": { "message": "The %s's body melts away.", "corpse_type": "NO_CORPSE" },
@@ -28,7 +28,7 @@
     "description": "A simple green gelatinous slime, gradually moving across the ground.",
     "volume": "62500 ml",
     "weight": "57500 g",
-    "hp": 70,
+    "hp": 75,
     "speed": 50,
     "morale": 100,
     "melee_skill": 3,
@@ -360,12 +360,11 @@
   {
     "type": "MONSTER",
     "id": "mon_sc_glowing_slime",
-    "species": [ "GLOWSLIME" ],
+    "species": [ "GLOWSLIME", "SLIME" ],
     "name": "glowing slime",
     "description": "A gelatinous slime that appears to glow in the dark while gradually moving across the ground.",
     "copy-from": "mon_sc_slime",
-    "luminance": 3,
-    "bleeds": "fd_glow_goo"
+    "luminance": 3
   },
   {
     "type": "MONSTER",
@@ -377,17 +376,42 @@
     "color": "pink",
     "proportional": { "speed": 0.5, "attack_cost": 0.5 },
     "armor_bash": 50,
-    "armor_cut": 8,
-    "armor_stab": 10,
-    "armor_bullet": 50,
-    "armor_acid": 0,
+    "armor_cut": 10,
+    "armor_bullet": 30,
+    "armor_acid": 50,
     "armor_elec": 100,
     "bleed_rate": 0
   },
   {
     "type": "MONSTER",
+    "id": "mon_sc_diamond_slime",
+    "name": "diamond slime",
+    "description": "A slime that appears to have some sparkly diamond mixed into it.",
+    "copy-from": "mon_sc_slime",
+    "material": [ "diamond", "slime" ],
+    "color": "light_gray",
+    "armor_bash": 11,
+    "armor_cut": 10,
+    "armor_bullet": 4,
+    "armor_acid": 20,
+    "armor_elec": 10,
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "id": "diamond_shards",
+        "attack_type": "spell",
+        "spell_data": { "id": "diamond_slime_shards", "hit_self": true },
+        "cooldown": 8,
+        "monster_message": "%1$s releases shards of diamond in all directions!"
+      }
+    ],
+    "extend": { "flags": [ "ACIDPROOF" ] }
+  },
+  {
+    "type": "MONSTER",
     "id": "mon_sc_intelligent_slime",
     "name": "intelligent slime",
+    "default_faction": "slime_leader",
     "description": "This slime's brain appears to be a bit more evolved than usual. It appears more intelligent than the other slimes.",
     "copy-from": "mon_sc_slime",
     "proportional": { "speed": 1.25 },
@@ -399,6 +423,7 @@
     "armor_elec": 4,
     "armor_bullet": 2,
     "vision_day": 30,
+    "scents_tracked": [ "sc_human" ],
     "path_settings": { "max_dist": 30, "avoid_traps": true, "avoid_sharp": true, "allow_open_doors": true },
     "extend": {
       "flags": [ "PATH_AVOID_DANGER_1", "SMELLS", "CLIMBS", "CAN_OPEN_DOORS" ]
@@ -794,11 +819,10 @@
     "color": "pink",
     "proportional": { "speed": 0.5, "attack_cost": 0.5 },
     "armor_bash": 70,
-    "armor_cut": 10,
-    "armor_stab": 12,
-    "armor_bullet": 75,
-    "armor_acid": 0,
-    "armor_elec": 200,
+    "armor_cut": 14,
+    "armor_bullet": 42,
+    "armor_acid": 70,
+    "armor_elec": 100,
     "bleed_rate": 0,
     "death_function": {
       "message": "The %s splits in two!",
@@ -825,12 +849,14 @@
     "type": "MONSTER",
     "id": "mon_sc_intelligent_slime_large",
     "name": "large intelligent slime",
+    "default_faction": "slime_leader",
     "description": "The brain of this large slime appears to be a bit more evolved than usual. Even its behavior seems more intelligent than the other slimes.",
     "copy-from": "mon_sc_slime_large",
     "proportional": { "speed": 1.25 },
     "relative": { "dodge": 2, "melee_skill": 2, "armor_bash": 1, "armor_stab": 1, "armor_acid": 2, "armor_elec": 2, "armor_bullet": 2 },
     "melee_dice_sides": 4,
     "vision_day": 30,
+    "scents_tracked": [ "sc_human" ],
     "path_settings": { "max_dist": 30, "avoid_traps": true, "avoid_sharp": true },
     "extend": {
       "flags": [ "PATH_AVOID_DANGER_1", "SMELLS", "CLIMBS" ]
@@ -844,18 +870,42 @@
   {
     "type": "MONSTER",
     "id": "mon_sc_glowing_slime_large",
-    "species": [ "GLOWSLIME" ],
+    "species": [ "GLOWSLIME", "SLIME" ],
     "name": "large glowing slime",
     "description": "A large selatinous slime that appears to glow in the dark while gradually moving across the ground.",
     "copy-from": "mon_sc_slime_large",
     "luminance": 6,
-    "bleeds": "fd_glow_goo",
     "death_function": {
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_glowing", "hit_self": true }
     }
   },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_diamond_slime_large",
+    "name": "large diamond slime",
+    "description": "A large slime that appears to have some sparkly diamond mixed into it.",
+    "copy-from": "mon_sc_slime_large",
+    "material": [ "diamond", "slime" ],
+    "color": "light_gray",
+    "armor_bash": 20,
+    "armor_cut": 18,
+    "armor_bullet": 8,
+    "armor_acid": 40,
+    "armor_elec": 18,
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "id": "large diamond_shards",
+        "attack_type": "spell",
+        "spell_data": { "id": "diamond_slime_shards", "hit_self": true },
+        "cooldown": 8,
+        "monster_message": "%1$s releases large shards of diamond in all directions!"
+      }
+    ],
+    "extend": { "flags": [ "ACIDPROOF" ] }
+  }
   {
     "type": "MONSTER",
     "id": "mon_sc_friendly_slime",

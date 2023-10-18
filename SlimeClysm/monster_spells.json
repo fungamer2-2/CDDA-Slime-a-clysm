@@ -195,8 +195,42 @@
         "min_radius": 1,
         "max_radius": 1
       }
-    ]
-    
-    
+    ]    
+  },
+  {
+    "id": "diamond_slime_shards",
+    "type": "SPELL",
+    "name": "Diamond Shards",
+    "description": "Release shards of diamond.",
+    "valid_targets": [ "hostile", "ally", "ground" ],
+    "min_damage": 1,
+    "max_damage": 10,   
+    "min_aoe": 5,
+    "max_aoe": 5,
+    "damage_type": "cut",
+    "effect": "attack",
+    "shape": "blast",
+    "min_accuracy": 0,
+    "max_accuracy": 0,
+    "affected_body_parts": [ "torso", "arm_l", "arm_r", "leg_l", "leg_r" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "RANDOM_DAMAGE", "NON_MAGICAL" ]
+  },
+  {
+    "id": "large_diamond_slime_shards",
+    "type": "SPELL",
+    "name": "Large Diamond Shards",
+    "description": "Release large shards of diamond.",
+    "valid_targets": [ "hostile", "ally", "ground" ],
+    "min_damage": 1,
+    "max_damage": 20,   
+    "min_aoe": 7,
+    "max_aoe": 7,
+    "damage_type": "cut",
+    "effect": "attack",
+    "shape": "blast",
+    "min_accuracy": 0,
+    "max_accuracy": 0,
+    "affected_body_parts": [ "torso", "arm_l", "arm_r", "leg_l", "leg_r" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "RANDOM_DAMAGE", "NON_MAGICAL" ]
   }
 ]
