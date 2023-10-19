@@ -1,13 +1,15 @@
 [
   {
     "type": "MONSTER_FACTION",
-    "name": "slime_leader",
-    "neutral": [ "slime" ]
+    "name": "slime",
+    "base_faction": "nether",
+    "neutral": [ "nether", "mi-go", "passive_machine" ],
+    "friendly": [ "zombie", "slime_leader" ]
   },
   {
     "type": "MONSTER_FACTION",
-    "name": "slime",
-    "base_faction": "nether",
-    "friendly": [ "slime_leader" ]
+    "name": "slime_leader",
+    "base_faction": "slime",
+    "neutral": [ "slime" ]
   }
 ]

@@ -39,7 +39,7 @@
     "type": "emit",
     "field": "fd_hot_air2",
     "qty": 10,
-    "intensity": 2
+    "intensity": 3
   },
   {
     "id": "emit_hot_air2",
