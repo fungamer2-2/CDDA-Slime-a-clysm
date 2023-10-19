@@ -25,5 +25,27 @@
     "field": "fd_cold_air3",
     "qty": 20,
     "intensity": 3
+  },
+  {
+    "id": "emit_thin_smoke",
+    "type": "emit",
+    "field": "fd_smoke",
+    "qty": 7,
+    "intensity": 1,
+    "chance": 33
+  },
+  {
+    "id": "emit_hot_air",
+    "type": "emit",
+    "field": "fd_hot_air2",
+    "qty": 10,
+    "intensity": 2
+  },
+  {
+    "id": "emit_hot_air2",
+    "type": "emit",
+    "field": "fd_hot_air3",
+    "qty": 10,
+    "intensity": 3
   }
 ]

@@ -199,7 +199,7 @@
     "type": "MONSTER",
     "id": "mon_sc_transparent_slime",
     "name": "transparent slime",
-    "description": "A large transparent gelatinous slime, gradually moving across the ground. It's so clear that you can see right through it, so it can be easy to miss unless you're paying attention.",
+    "description": "A transparent gelatinous slime, gradually moving across the ground. It's so clear that you can see right through it, so it can be easy to miss unless you're paying attention.",
     "copy-from": "mon_sc_slime",
     "color": "white",
     "extend": { "flags": [ "CAMOUFLAGE" ] }
@@ -365,6 +365,29 @@
     "description": "A gelatinous slime that appears to glow in the dark while gradually moving across the ground.",
     "copy-from": "mon_sc_slime",
     "luminance": 3
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_lava_slime",
+    "name": "lava slime",
+    "description": "A gelatinous slime that seems to also be made out of lava. Faint smoke rises from its body.",
+    "copy-from": "mon_sc_slime",
+    "color": "red",
+    "emit_fields": [ 
+      { "emit_id": "emit_thin_smoke", "delay": "2 s" },
+      { "emit_id": "emit_hot_air", "delay": "1 s" } 
+    ],
+    "melee_damage": [ { "damage_type": "heat", "amount": 4 } ],
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "id": "molten_rock",
+        "attack_type": "spell",
+        "spell_data": { "id": "molten_rock", "hit_self": true },
+        "cooldown": 8,
+        "monster_message": "%1$s releases chunks of hot molten rock!"
+      }
+    ]
   },
   {
     "type": "MONSTER",
@@ -904,7 +927,35 @@
         "monster_message": "%1$s releases large shards of diamond in all directions!"
       }
     ],
-    "extend": { "flags": [ "ACIDPROOF" ] }
+    "extend": { "flags": [ "ACIDPROOF" ] },
+    "death_function": {
+      "message": "The %s splits in two!",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_large_slime_split_diamond", "hit_self": true }
+    }
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_lava_slime_large",
+    "name": "large lava slime",
+    "description": "A large gelatinous slime that seems to also be made out of lava. Faint smoke rises from its body.",
+    "copy-from": "mon_sc_slime",
+    "color": "red",
+    "emit_fields": [ 
+      { "emit_id": "emit_thin_smoke", "delay": "1 s" },
+      { "emit_id": "emit_hot_air2", "delay": "1 s" } 
+    ],
+    "melee_damage": [ { "damage_type": "heat", "amount": 7 } ],
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "id": "molten_rock",
+        "attack_type": "spell",
+        "spell_data": { "id": "molten_rock_large", "hit_self": true },
+        "cooldown": 8,
+        "monster_message": "%1$s releases chunks of hot molten rock!"
+      }
+    ]
   },
   {
     "type": "MONSTER",
@@ -918,9 +969,14 @@
     "regenerates": 1,
     "tracking_distance": 3,
     "melee_skill": 4,
-    "armor_bash": 3,
-    "armor_stab": 5,
-    "armor_acid": 3,
-    "armor_elec": 3
+    "armor_bash": 7,
+    "armor_stab": 9,
+    "armor_acid": 9,
+    "armor_elec": 3,
+    "death_function": { 
+      "message": "The %s's body melts away.",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_guilt", "min_level": 10 }
+    }
   }
 ]
