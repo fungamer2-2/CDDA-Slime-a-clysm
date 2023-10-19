@@ -33,5 +33,6 @@ If you discover a bug or have a feature request, feel free to [open an issue](ht
 - Amoeba slime - spawns in large groups, sticks together, they may spawn more amoeba slimes (only when close to target to prevent exponential growth), defeating one of them deals some damage to surrounding amoeba slimes
 - Intelligent slime - more intelligent in movement and behavior
 - Glowing slime - emits some light and glows in the dark 
+- Diamond slime - resistant to certain damage types, has a special attack that releases diamond shards from itself, dealing cut damage to nearby targets
 
 In addition, each type has a large variant. The large variants are larger and tougher, and they split into two of the normal-sized variants on death.
