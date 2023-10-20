@@ -177,7 +177,7 @@
     "id": "EOC_amoeba_spawn",
     "condition": {
       "and": [
-        { "not": { "one_in_chance": 3 } },
+        { "one_in_chance": 2 },
         { "compare_int": [ { "u_val": "pos_z" }, "==", { "npc_val": "pos_z" } ] },
         { 
           "or": [

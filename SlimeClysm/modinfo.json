@@ -5,7 +5,7 @@
     "name": "Slime-a-clysm",
     "authors": [ "fungamer2" ],
     "maintainers": [ "fungamer2" ],
-    "description": "A world full of various slime creatures. NOTE: Currently only designed for 0.G stable.",
+    "description": "Changes the world to one full of various slime creatures.",
     "category": "total_conversion",
     "dependencies": [ "dda" ]
   },
