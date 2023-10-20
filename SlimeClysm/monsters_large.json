@@ -454,7 +454,7 @@
   {
     "type": "MONSTER",
     "id": "mon_sc_polymer_slime_large",
-    "name": "rubber slime",
+    "name": "large polymer slime",
     "description": "A large colorless slime, gradually moving across the ground. It seems to be made with a substance that is quite durable, and appears to have a self-healing property.",
     "copy-from": "mon_sc_slime_large",
     "material": [ "slime" ],
@@ -465,7 +465,12 @@
     "armor_bullet": 18,
     "armor_acid": 30,
     "armor_elec": 15,
-    "bleed_rate": 15
+    "bleed_rate": 15,
+    "death_function": {
+      "message": "The %s splits in two!",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_large_slime_split_polymer", "hit_self": true }
+    }
   },
   {
     "type": "MONSTER",
