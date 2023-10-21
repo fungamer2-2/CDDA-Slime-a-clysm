@@ -1,0 +1,8 @@
+[
+  {
+    "type": "mutation",
+    "id": "SLIMEMIND",
+    "copy-from": "SLIMEMIND",
+    "extend": { "moncams": [ [ "mon_sc_friendly_slime", 30 ] ] }
+  }
+]

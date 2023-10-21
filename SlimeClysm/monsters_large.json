@@ -11,9 +11,9 @@
     "melee_dice": 3,
     "melee_dice_sides": 3,
     "armor_bash": 4,
-    "armor_stab": 6,
-    "armor_acid": 5,
-    "armor_elec": 5,
+    "armor_stab": 4,
+    "armor_acid": 4,
+    "armor_elec": 6,
     "armor_bullet": 4,
     "death_function": {
       "message": "The %s splits in two!",

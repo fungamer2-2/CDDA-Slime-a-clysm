@@ -1,0 +1,34 @@
+[
+  {
+    "type": "item_group",
+    "id": "mutagens",
+    "copy-from": "mutagens",
+    "extend": {
+      "items": [ [ "mutagen_slime", 8 ] ]
+    }
+  },
+  {
+    "type": "item_group",
+    "id": "mut_iv",
+    "copy-from": "mut_iv",
+    "extend": {
+      "items": [ [ "iv_mutagen_slime", 8 ] ]
+    }
+  },
+  {
+    "type": "item_group",
+    "id": "goo",
+    "copy-from": "goo",
+    "extend": {
+      "items": [ [ "canister_goo", 32 ] ]
+    }
+  },
+  {
+    "type": "item_group",
+    "id": "mut_lab",
+    "copy-from": "mut_lab",
+    "extend": {
+      "items": [ [ "iv_mutagen_slime", 8 ] ]
+    }
+  }
+]
