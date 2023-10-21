@@ -1,5 +1,37 @@
 [
   {
+    "id": "death_sc_slime",
+    "type": "SPELL",
+    "name": { "str": "Slime Death" },
+    "description": "The slime melts away.",
+    "valid_targets": [ "ground", "self" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
+    "shape": "blast",
+    "effect": "attack",
+    "field_id": "fd_slime",
+    "min_field_intensity": 3,
+    "max_field_intensity": 3,
+    "field_chance": 1
+  },
+  {
+    "id": "death_sc_friendly_slime",
+    "type": "SPELL",
+    "name": { "str": "Friendly Slime Death" },
+    "description": "The friendly slime dies. If the player killed them, they will suffer a morale penalty, because how dare you do such a thing to a friendly creature.",
+    "valid_targets": [ "hostile" ],
+    "flags": [ "SILENT", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
+    "shape": "blast",
+    "effect": "guilt",
+    "effect_str": "NULL",
+    "min_damage": 100,
+    "max_damage": 100,
+    "min_duration": 180000,
+    "max_duration": 180000,
+    "min_range": 5,
+    "max_range": 5,
+    "extra_effects": [ { "id": "death_sc_slime", "hit_self": true } ]
+  },
+  {
     "id": "death_large_slime_split",
     "type": "SPELL",
     "name": "Slime Split (large)",

@@ -17,7 +17,11 @@
     "vision_day": 15,
     "vision_night": 5,
     "melee_damage": [ { "damage_type": "cut", "amount": 0 } ],
-    "death_function": { "message": "The %s's body melts away.", "corpse_type": "NO_CORPSE" },
+    "death_function": { 
+      "message": "The %s's body melts away.",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_sc_slime", "hit_self": true }
+    },
     "flags": [ "SEES", "HEARS", "GOODHEARING", "NOHEAD", "NO_BREATHE" ]
   },
   {
@@ -441,7 +445,7 @@
   {
     "type": "MONSTER",
     "id": "mon_sc_polymer_slime",
-    "name": "rubber slime",
+    "name": "polymer slime",
     "description": "A colorless slime, gradually moving across the ground. It seems to be made with a substance that is quite durable, and appears to have a self-healing property.",
     "copy-from": "mon_sc_slime",
     "material": [ "slime" ],
@@ -520,7 +524,7 @@
     "death_function": { 
       "message": "The %s's body melts away.",
       "corpse_type": "NO_CORPSE",
-      "effect": { "id": "death_guilt", "min_level": 10 }
+      "effect": { "id": "death_sc_friendly_slime", "min_level": 10 }
     }
   }
 ]
