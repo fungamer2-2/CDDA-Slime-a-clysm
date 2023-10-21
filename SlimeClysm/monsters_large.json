@@ -513,14 +513,14 @@
       { "emit_id": "emit_thin_smoke", "delay": "1 s" },
       { "emit_id": "emit_hot_air2", "delay": "1 s" } 
     ],
-    "melee_damage": [ { "damage_type": "heat", "amount": 7 } ],
+    "melee_damage": [ { "damage_type": "heat", "amount": 6 } ],
     "special_attacks": [
       {
         "type": "monster_attack",
         "id": "molten_rock",
         "attack_type": "spell",
         "spell_data": { "id": "molten_rock_large", "hit_self": true },
-        "cooldown": 8,
+        "cooldown": 10,
         "monster_message": "%1$s releases chunks of hot molten rock!"
       }
     ]
