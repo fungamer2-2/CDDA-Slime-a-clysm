@@ -35,5 +35,6 @@ If you discover a bug or have a feature request, feel free to [open an issue](ht
 - Glowing slime - emits some light and glows in the dark 
 - Diamond slime - resistant to certain damage types, has a special attack that releases diamond shards from itself, dealing cut damage to nearby targets
 - Lava slime - emits hot air and smoke, deals heat damage, occasionally releases chunks of hot molten rock which deals heat damage to those nearby (may cause fire on nearby tiles)
+- Slime hopper - hops around, towards you if far away, randomly if close, very evasive 
 
 In addition, each type has a large variant. The large variants are larger and tougher, and they split into two of the normal-sized variants on death.
