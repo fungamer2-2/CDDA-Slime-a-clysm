@@ -509,6 +509,7 @@
     "description": "A large gelatinous slime that seems to also be made out of lava. Faint smoke rises from its body.",
     "copy-from": "mon_sc_slime",
     "color": "red",
+    "luminance": 18,
     "emit_fields": [ 
       { "emit_id": "emit_thin_smoke", "delay": "1 s" },
       { "emit_id": "emit_hot_air2", "delay": "1 s" } 
