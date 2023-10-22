@@ -524,6 +524,55 @@
         "cooldown": 10,
         "monster_message": "%1$s releases chunks of hot molten rock!"
       }
-    ]
+    ],
+    "death_function": {
+      "message": "The %s splits in two!",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_large_slime_split_lava", "hit_self": true }
+    }
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_giant_slime_leaper",
+    "name": "giant slime leaper",
+    "description": "A giant slime that hops around. It looks like it could deal a lot of damage if it landed on someone.",
+    "copy-from": "mon_sc_slime_large",
+    "proportional": { "speed": 0.5, "attack_cost": 0.5 },
+    "relative": { "dodge": 3 },
+    "special_attacks": [
+      {
+        "type": "leap",
+        "cooldown": 3,
+        "min_range": 3,
+        "max_range": 3,
+        "move_cost": 10,
+        "self_effects": [ { "id": "slime_leapt", "duration": 1 } ]
+      },
+      {
+        "type": "monster_attack",
+        "attack_type": "melee",
+        "id": "slime_crush",
+        "cooldown": 0,
+        "accuracy": 10,
+        "hitsize_min": 10,
+        "blockable": false,
+        "required_effects_any": [ "slime_leapt" ],
+        "body_parts": [ [ "torso", 1 ] ],
+        "damage_max_instance": [ { "damage_type": "bash", "amount": 26, "armor_multiplier": 0.5, "min_mul": 0.7 } ],
+        "self_effects_always": [ { "id": "run", "duration": [ 3, 4 ] } ],
+        "effects": [ { "id": "downed", "duration": [ 5, 10 ] } ],
+        "hit_dmg_u": "%1$s jumps at you, crushing you!",
+        "hit_dmg_npc": "%1$s jumps at <npcname>, crushing them!",
+        "miss_msg_u": "%1$s jumps at you, but you dodge!",
+        "miss_msg_npc": "%1$s jumps at <npcname>, but they dodge!",
+        "no_dmg_msg_u": "%1$s jumps at you, but is knocked aside.",
+        "no_dmg_msg_npc": "%1$s jumps at <npcname>, but is knocked aside."
+      }
+    ],
+    "death_function": {
+      "message": "As the %s melts away, a bunch of slime hoppers come out from its body!",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_large_slime_split_leaper", "hit_self": true }
+    }
   }
 ]

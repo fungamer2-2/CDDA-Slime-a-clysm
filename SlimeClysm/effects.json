@@ -29,6 +29,11 @@
     "max_duration": "3 s"
   },
   {
+    "id": "slime_leapt",
+    "type": "effect_type",
+    "max_duration": "2 s"
+  },
+  {
     "id": "slime_boosted",
     "type": "effect_type",
     "name": [ "Boosted" ],
