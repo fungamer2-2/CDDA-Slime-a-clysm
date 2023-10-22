@@ -103,8 +103,8 @@
     "name": "GROUP_SLIME_STANDARD",
     "monsters": [
       { "monster": "mon_sc_slime", "weight": 180, "cost_multiplier": 0 },
-      { "monster": "mon_sc_slime", "weight": 5, "cost_multiplier": 3, "pack_size": [ 3, 6 ] }, 
-      { "monster": "mon_sc_slime", "weight": 3, "cost_multiplier": 6, "pack_size": [ 5, 15 ] },
+      { "monster": "mon_sc_slime", "weight": 2, "cost_multiplier": 3, "pack_size": [ 3, 6 ] }, 
+      { "monster": "mon_sc_slime", "weight": 2, "cost_multiplier": 6, "pack_size": [ 5, 15 ] },
       { "monster": "mon_sc_slime_large", "weight": 35, "cost_multiplier": 3 },
       { "monster": "mon_sc_intelligent_slime", "weight": 20, "cost_multiplier": 3, "starts": "6 days" },
       { "monster": "mon_sc_intelligent_slime_large", "weight": 2, "cost_multiplier": 6, "starts": "6 days" },
