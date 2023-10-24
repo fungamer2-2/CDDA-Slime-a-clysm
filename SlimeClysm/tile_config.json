@@ -12,7 +12,8 @@
     {
       "file": "tileset.png",
       "tiles": [
-        { "id": "mon_sc_slime", "fg": 1, "rotates": false }
+        { "id": "mon_sc_slime", "fg": 1, "rotates": false },
+        { "id": "mon_sc_red_slime", "fg": 2, "rotates": false }
       ]
     }
   ]
