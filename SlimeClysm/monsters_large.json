@@ -231,7 +231,7 @@
     "type": "MONSTER",
     "id": "mon_sc_black_slime_large",
     "name": "large black slime",
-    "description": "A large black gelatinous slime, gradually moving across the ground. It's so dark, it absorbs light from its surroundings, making it difficult to see at night.",
+    "description": "A large black gelatinous slime, gradually moving across the ground. It's so dark, it absorbs light from its surroundings, making it nearly invisible at night.",
     "copy-from": "mon_sc_slime_large",
     "color": "black",
     "vision_night": 8,
