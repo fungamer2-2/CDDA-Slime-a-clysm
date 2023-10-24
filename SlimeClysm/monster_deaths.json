@@ -51,7 +51,7 @@
     "type": "SPELL",
     "copy-from": "death_base_slime_split",
     "effect_str": "mon_sc_slime",
-    "valid_targets": [ "self", "ground" ],
+    "valid_targets": [ "self", "ground" ]
   },
   {
     "id": "death_large_slime_split_red",
@@ -210,8 +210,8 @@
     "type": "SPELL",
     "name": "Lava Slime Split (large)",
     "description": "The large lava slime splits into two normal-sized lava slimes.",
-    "valid_targets": [ "self", "ground" ],
     "copy-from": "death_base_slime_split",
+    "effect_str": "mon_sc_lava_slime"
   },
   {
     "id": "death_large_slime_split_polymer",

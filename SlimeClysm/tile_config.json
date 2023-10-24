@@ -1,0 +1,19 @@
+{
+  "type": "mod_tileset",
+  "compatibility": [ "UltimateCataclysm" ],
+  "tile_info": [
+    {
+      "width": 32, 
+      "height": 32,
+      "pixelscale": 2
+    }
+  ],
+  "tiles-new": [
+    {
+      "file": "tileset.png",
+      "tiles": [
+        { "id": "mon_sc_slime", "fg": 1, "rotates": false }
+      ]
+    }
+  ]
+}
