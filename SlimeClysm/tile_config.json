@@ -15,7 +15,8 @@
       "tiles": [
         { "id": "mon_sc_slime", "fg": 0, "rotates": false },
         { "id": "mon_sc_red_slime", "fg": 1, "rotates": false },
-        { "id": "mon_sc_orange_slime", "fg": 2, "rotates": false }
+        { "id": "mon_sc_orange_slime", "fg": 2, "rotates": false },
+        { "id": "mon_sc_yellow_slime", "fg": 3, "rotates": false }
       ]
     },
     {

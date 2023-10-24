@@ -507,7 +507,7 @@
     "id": "mon_sc_lava_slime_large",
     "name": "large lava slime",
     "description": "A large gelatinous slime that seems to also be made out of lava. Faint smoke rises from its body.",
-    "copy-from": "mon_sc_slime",
+    "copy-from": "mon_sc_slime_large",
     "color": "red",
     "luminance": 18,
     "emit_fields": [ 
