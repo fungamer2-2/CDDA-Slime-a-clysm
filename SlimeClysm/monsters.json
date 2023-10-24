@@ -507,6 +507,7 @@
     "name": "friendly slime",
     "description": "This slime has recognized you as a friend, and stays by to protect you.",
     "copy-from": "mon_sc_slime",
+    "looks_like": "mon_sc_slime",
     "default_faction": "player",
     "speed": 70,
     "vision_day": 40,

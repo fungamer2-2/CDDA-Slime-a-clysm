@@ -539,6 +539,7 @@
     "copy-from": "mon_sc_slime_large",
     "proportional": { "speed": 0.5, "attack_cost": 0.5 },
     "relative": { "dodge": 3 },
+    "looks_like": "mon_sc_slime_large",
     "special_attacks": [
       {
         "type": "leap",
