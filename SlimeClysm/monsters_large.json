@@ -504,6 +504,29 @@
   },
   {
     "type": "MONSTER",
+    "id": "mon_sc_stone_slime_large",
+    "name": "large stone slime",
+    "description": "A large tough slime that appears to be partially made of stone, and it seems like it could do more damage than usual",
+    "copy-from": "mon_sc_slime_large",
+    "material": [ "stone", "slime" ],
+    "color": "light_gray",
+    "armor_bash": 24,
+    "armor_cut": 24,
+    "armor_bullet": 12,
+    "armor_acid": 32,
+    "armor_elec": 16,
+    "melee_dice_sides": 4,
+    "special_attacks": [
+      { 
+        "id": "slam",
+        "cooldown": 8,
+        "accuracy": 7,
+        "damage_max_instance": [ { "damage_type": "bash", "amount": 16 } ]
+      }   
+    ]
+  },
+  {
+    "type": "MONSTER",
     "id": "mon_sc_lava_slime_large",
     "name": "large lava slime",
     "description": "A large gelatinous slime that seems to also be made out of lava. Faint smoke rises from its body.",
