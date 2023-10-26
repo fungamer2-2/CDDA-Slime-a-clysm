@@ -12,6 +12,7 @@
     {
       "file": "tileset.png",
       "//": "range 0 to 3",
+      "sprite_offset_y": -4,
       "tiles": [
         { "id": "mon_sc_slime", "fg": 0, "rotates": false },
         { "id": "mon_sc_red_slime", "fg": 1, "rotates": false },
@@ -27,7 +28,8 @@
       "sprite_offset_y": -16,
       "//": "range 4 to 5",
       "tiles": [
-        { "id": "mon_sc_slime_large", "fg": 5, "rotates": false }
+        { "id": "mon_sc_slime_large", "fg": 4, "rotates": false },
+        { "id": "mon_sc_red_slime_large", "fg": 5, "rotates": false }
       ]
     }
   ]
