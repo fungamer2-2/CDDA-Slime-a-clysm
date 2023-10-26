@@ -37,6 +37,7 @@ If you discover a bug or have a feature request, feel free to [open an issue](ht
 - Diamond slime - resistant to certain damage types, has a special attack that releases diamond shards from itself, dealing cut damage to nearby targets
 - Lava slime - emits hot air and smoke, deals heat damage, occasionally releases chunks of hot molten rock which deals heat damage to those nearby (may cause fire on nearby tiles)
 - Stone slime - more durable and deals more damage, has the "slam" attack
+- Non-newtonian slime - made of a substance that acts like a liquid in most cases, but acts like a solid when subject to force 
 - Slime hopper - hops around, towards you if far away, randomly if close, very evasive
 - Giant slime leaper - leaps towards its target, which if it lands on them, can deal a lot of damage and knock them down
 
