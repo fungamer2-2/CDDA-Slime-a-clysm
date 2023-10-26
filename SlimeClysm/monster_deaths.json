@@ -222,6 +222,22 @@
     "effect_str": "mon_sc_polymer_slime"
   },
   {
+    "id": "death_large_slime_split_stone",
+    "type": "SPELL",
+    "name": "Stone Slime Split (large)",
+    "description": "The large stone slime splits into two normal-sized stone slimes.",
+    "copy-from": "death_base_slime_split",
+    "effect_str": "mon_sc_stone_slime"
+  },
+  {
+    "id": "death_large_slime_split_non_newtonian",
+    "type": "SPELL",
+    "name": "Non-Newontian Slime Split (large)",
+    "description": "The large non-newtonian slime splits into two normal-sized stone slimes.",
+    "copy-from": "death_base_slime_split",
+    "effect_str": "mon_sc_non_newtonian_slime"
+  },
+  {
     "id": "death_amoeba_slime",
     "type": "SPELL",
     "name": "Amoeba Slime Death",

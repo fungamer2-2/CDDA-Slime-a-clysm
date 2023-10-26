@@ -461,6 +461,20 @@
   },
   {
     "type": "MONSTER",
+    "id": "mon_sc_non_newtonian_slime",
+    "name": "non-newtonian slime",
+    "description": "A white slime that is made out of a weirdly behaving substance - under most circumstances it behaves like a liquid, but when subject to force it behaves more like a solid.",
+    "copy-from": "mon_sc_slime",
+    "material": [ "slime", "alien_liquid" ],
+    "color": "white",
+    "armor_bash": 20,
+    "armor_cut": 0,
+    "armor_bullet": 10,
+    "armor_acid": 15,
+    "armor_elec": 2
+  },
+  {
+    "type": "MONSTER",
     "id": "mon_sc_diamond_slime",
     "name": "diamond slime",
     "description": "A slime that appears more sparkly and tough than usual. At times, it releases shards of diamond that appear sharp.",

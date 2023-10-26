@@ -43,20 +43,22 @@
     "type": "monstergroup",
     "name": "GROUP_SLIME_MATERIAL",
     "monsters": [
-      { "monster": "mon_sc_rubber_slime", "weight": 3, "cost_multiplier": 4 },
-      { "monster": "mon_sc_diamond_slime", "weight": 30, "cost_multiplier": 2 },
-      { "monster": "mon_sc_polymer_slime", "weight": 15, "cost_multiplier": 2 },
-      { "monster": "mon_sc_stone_slime", "weight": 16, "cost_multiplier": 2 }
+      { "monster": "mon_sc_rubber_slime", "weight": 6, "cost_multiplier": 4 },
+      { "monster": "mon_sc_diamond_slime", "weight": 60, "cost_multiplier": 2 },
+      { "monster": "mon_sc_polymer_slime", "weight": 30, "cost_multiplier": 2 },
+      { "monster": "mon_sc_stone_slime", "weight": 32, "cost_multiplier": 2 },
+      { "monster": "mon_sc_non_newtonian_slime", "weight": 3, "cost_multiplier": 4 }
     ]
   },
   {
     "type": "monstergroup",
     "name": "GROUP_LARGE_SLIME_MATERIAL",
     "monsters": [
-      { "monster": "mon_sc_rubber_slime_large", "weight": 3, "cost_multiplier": 4 },
-      { "monster": "mon_sc_diamond_slime_large", "weight": 30, "cost_multiplier": 2 },
-      { "monster": "mon_sc_polymer_slime_large", "weight": 15, "cost_multiplier": 2 },
-      { "monster": "mon_sc_stone_slime_large", "weight": 16, "cost_multiplier": 2 }
+      { "monster": "mon_sc_rubber_slime_large", "weight": 6, "cost_multiplier": 4 },
+      { "monster": "mon_sc_diamond_slime_large", "weight": 60, "cost_multiplier": 2 },
+      { "monster": "mon_sc_polymer_slime_large", "weight": 30, "cost_multiplier": 2 },
+      { "monster": "mon_sc_stone_slime_large", "weight": 32, "cost_multiplier": 2 },
+      { "monster": "mon_sc_non_newtonian_slime_large", "weight": 3, "cost_multiplier": 4 }
     ]
   },
   {
