@@ -1,6 +1,6 @@
 # Slime-a-clysm
 
-A mod of Cataclysm: Dark Days Ahead, where the world changes to one full of slime monsters instead of zombies
+A mod of Cataclysm: Dark Days Ahead, where instead of zombies, the dominant enemy is slime monsters - survive in a world full of various types of slime monsters.
 
 I also created my own various types of slime monsters and a slime forest that may appear in-game as well
 
