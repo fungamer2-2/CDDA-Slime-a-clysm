@@ -1,0 +1,64 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_slime_drainer_latch",
+    "condition": {
+      "and": [
+        { "compare_int": [ { "distance": [ "u", "npc" ] }, "<=", { "const": 1 } ] },
+        { "not": { "npc_has_effect": "grabbing" } }
+      ]
+    },
+    "effect": [
+      { "arithmetic": [ { "u_val": "var", "var_name": "tmpskill", "type": "temp", "context": "slime_drainer" }, "=", { "u_val": "strength" } ] },
+      { "arithmetic": [ { "u_val": "var", "var_name": "tmpskill", "type": "temp", "context": "slime_drainer" }, "+=", { "arithmetic": [ { "u_val": "dexterity" }, "/", { "const": 2 } ] } ] },
+      { "arithmetic": [ { "u_val": "var", "var_name": "tmpskill", "type": "temp", "context": "slime_drainer" }, "+=", { "u_val": "skill_level", "skill": "unarmed" } ] },
+      {
+        "run_eocs": [
+          {
+            "id": "consted_roll",
+            "condition": {
+              "roll_contested": { "u_val": "var", "var_name": "tmpskill", "type": "temp", "context": "slime_drainer" },
+              "die_size": 32,
+              "difficulty": 40
+            },
+            "effect": [
+              { "u_message": "The slime drainer attempts to latch on to you, but you manage to break it off!", "type": "warning" }
+            ],
+            "false_effect": [
+              { "u_message": "The slime drainer latches on to you!", "type": "bad" },
+              { "npc_add_effect": "grabbing", "duration": "PERMANENT" },
+              { "u_add_effect": "grabbed", "intensity": 2, "target_part": "torso", "duration": "PERMANENT" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_slime_drain",
+    "condition": { 
+      "and": [
+        { "npc_has_effect": "grabbing" }
+      ]
+    },
+    "effect": [
+      { "u_message": "The slime drainer feeds on your energy to heal itself.", "type": "bad" },
+      { "npc_cast_spell": { "id": "slime_drainer_regen", "hit_self": true } },
+      { "arithmetic": [ { "u_val": "stamina" }, "-=", { "rand": 300 } ] },
+      { "arithmetic": [ { "u_val": "fatigue" }, "+=", { "rand": 4 } ] },
+      { "arithmetic": [ { "u_val": "focus" }, "-=", { "rand": 1 } ] },
+      {
+        "run_eocs": [
+          {
+            "id": "EOC_maybe_apply_drained",
+            "condition": { "one_in_chance": 2 },
+            "effect": [
+              { "u_add_effect": "drained", "duration": "60 seconds" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

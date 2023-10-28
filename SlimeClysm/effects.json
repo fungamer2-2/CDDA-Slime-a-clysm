@@ -65,5 +65,26 @@
       "hurt_chance_bot": [ 5 ] 
     },
     "scaling_mods": { "hurt_chance": [ 1 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "drained",
+    "name": [ "Drained" ],
+    "rating": "bad",
+    "max_intensity": 50,
+    "int_add_val": 1,
+    "int_decay_tick": 60,
+    "int_decay_remove": true,
+    "remove_message": "You feel full of energy once again.",
+    "base_mods": {
+      "str_mod": [ -0.1 ],
+      "per_mod": [ -0.06 ],
+      "speed_mod": [ -1 ]
+    },
+    "scaling_mods": {
+      "str_mod": [ -0.1 ],
+      "per_mod": [ -0.06 ],
+      "speed_mod": [ -1 ]
+    }
   }
 ]

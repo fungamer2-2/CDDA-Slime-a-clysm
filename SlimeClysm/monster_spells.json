@@ -302,5 +302,45 @@
     "field_id": "fd_fire",
     "//2": "Decided to leave in the explosion fx because it looks cool for this",
     "flags": [ "SILENT" ]
+  },
+  {
+    "id": "slime_drainer_latch",
+    "type": "SPELL",
+    "name": "Slime Drainer Latch",
+    "description": "The slime drainer attempts to latch on.",
+    "valid_targets": [ "hostile" ],
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_slime_drainer_latch",
+    "min_range": 1,
+    "max_range": 1,
+    "message": "",
+    "shape": "blast",
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ]
+  },
+  {
+    "id": "slime_drainer_drain",
+    "type": "SPELL",
+    "name": "Slime Drainer Drain",
+    "description": "The slime drainer drains its target's energy while latched on.",
+    "valid_targets": [ "hostile" ],
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_slime_drain",
+    "min_range": 1,
+    "max_range": 1,
+    "message": "",
+    "shape": "blast",
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ]
+  },
+  {
+    "id": "slime_drainer_regen",
+    "type": "SPELL",
+    "name": "Slime Drainer Regen",
+    "description": "After the slime drainer drains your energy, it converts it into health.",
+    "valid_targets": [ "self" ],
+    "min_damage": -1,
+    "max_damage": -10,
+    "effect": "attack",
+    "shape": "blast",
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "RANDOM_DAMAGE" ]
   }
 ]
