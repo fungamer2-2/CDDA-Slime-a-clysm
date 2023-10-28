@@ -624,5 +624,37 @@
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_leaper", "hit_self": true }
     }
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_large_slime_drainer",
+    "name": "large slime drainer",
+    "description": "A dark purple gelatinous slime, moving gradually across the ground. It latches onto its target and feed on its energy to heal.",
+    "copy-from": "mon_sc_slime_large",
+    "color": "magenta_red",
+    "grab_strength": 4,
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "id": "drainer_drain",
+        "attack_type": "spell",
+        "spell_data": { "id": "large_slime_drainer_drain" },
+        "cooldown": 0,
+        "monster_message": ""
+      },
+      {
+        "type": "monster_attack",
+        "id": "drainer_latch",
+        "attack_type": "spell",
+        "spell_data": { "id": "large_slime_drainer_latch" },
+        "cooldown": 7,
+        "monster_message": ""
+      }
+    ],
+    "death_function": {
+      "message": "The %s splits in two!",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_large_slime_split_drainer", "hit_self": true }
+    }
   }
 ]
