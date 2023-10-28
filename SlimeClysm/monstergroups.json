@@ -69,7 +69,8 @@
       { "monster": "mon_sc_dasher_slime", "weight": 3, "cost_multiplier": 2, "pack_size": [ 2, 7 ] },
       { "monster": "mon_sc_dissolver_slime", "weight": 35, "starts": "2 days" },
       { "monster": "mon_sc_lava_slime", "weight": 8, "starts": "7 days", "cost_multiplier": 4 },
-      { "monster": "mon_sc_glowing_slime", "weight": 30 }
+      { "monster": "mon_sc_glowing_slime", "weight": 30 },
+      { "monster": "mon_sc_slime_drainer", "weight": 9, "starts": "7_days", "cost_multiplier": 3 }
     ]
   },
   {
@@ -81,6 +82,7 @@
       { "monster": "mon_sc_dissolver_slime_large", "weight": 35, "starts": "2 days" },
       { "monster": "mon_sc_lava_slime_large", "weight": 8, "starts": "7 days", "cost_multiplier": 4 },
       { "monster": "mon_sc_glowing_slime_large", "weight": 30 },
+      { "monster": "mon_sc_slime_drainer_large", "weight": 9, "starts": "7_days", "cost_multiplier": 3 }
       { "monster": "mon_sc_giant_slime_leaper", "weight": 5, "cost_multiplier": 4, "starts": "10 days" }
     ]
   },
