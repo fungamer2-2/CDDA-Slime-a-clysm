@@ -590,21 +590,5 @@
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_sc_friendly_slime", "min_level": 10 }
     }
-  },
-  {
-    "type": "MONSTER",
-    "id": "mon_sc_tough_slime",
-    "name": "tough slime",
-    "description": "A green gelatinous slime, whose jelly mass is quite denser than usual.",
-    "copy-from": "mon_sc_slime",
-    "material": [ "slime" ],
-    "color": "green",
-    "relative": {
-      "armor_bash": 5,
-      "armor_cut": 4,
-      "armor_stab": 3,
-      "armor_acid": 4,
-      "armor_elec": 6
-    }  
   }
 ]
