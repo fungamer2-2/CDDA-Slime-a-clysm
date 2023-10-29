@@ -42,7 +42,8 @@
     "armor_stab": 0,
     "armor_acid": 0,
     "armor_elec": 2,
-    "bleed_rate": 30
+    "bleed_rate": 30,
+    "upgrades": { "into_group": "GROUP_SLIME_UPGRADE", "half_life": 30 }
   },
   {
     "type": "MONSTER",
@@ -52,7 +53,8 @@
     "description": "A red gelatinous slime, moving gradually across the ground. Its slime body appears to be capable of fixing any wounds it receives.",
     "copy-from": "mon_sc_slime",
     "regenerates": 5,
-    "color": "red"
+    "color": "red",
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -63,7 +65,8 @@
     "copy-from": "mon_sc_slime",
     "color": "light_red",
     "proportional": { "speed": 1.5 },
-    "relative": { "dodge": 1 }
+    "relative": { "dodge": 1 },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -90,7 +93,8 @@
         "no_dmg_msg_u": "%1$s sends an electric current at you, but it reflects off your armor.",
         "no_dmg_msg_npc": "%1$s sends an electric current at <npcname>, but it reflects off their armor."
       }
-    ]
+    ],
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -111,7 +115,8 @@
         "cooldown": 4,
         "monster_message": "The air around %1$s begins to feel cold."
       }
-    ]
+    ],
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -132,7 +137,8 @@
         "allow_no_target": true,
         "monster_message": "%1$s releases a cloud of blue gas!"
       }
-    ]
+    ],
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -154,7 +160,8 @@
         "max_range": 10,
         "monster_message": "%1$s suddenly shifts to a new position!"
       }
-    ]
+    ],
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -176,7 +183,8 @@
       }
     ],
     "extend": { "flags": [ "SWARMS" ] },
-    "//2": "SWARMS flag makes it more likely to stick with other slimes, in order to heal them"
+    "//2": "SWARMS flag makes it more likely to stick with other slimes, in order to heal them",
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -197,7 +205,8 @@
         "max_consider_range": 15,
         "self_effects": [ { "id": "slime_dash", "duration": [ 1, 3 ], "chance": 100 } ]
       }
-    ]
+    ],
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -206,7 +215,8 @@
     "description": "A transparent gelatinous slime, moving gradually across the ground. It's so transparent, that you can literally see right through it.",
     "copy-from": "mon_sc_slime",
     "color": "white",
-    "extend": { "flags": [ "CAMOUFLAGE" ] }
+    "extend": { "flags": [ "CAMOUFLAGE" ] },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -216,7 +226,8 @@
     "copy-from": "mon_sc_slime",
     "color": "black",
     "vision_night": 8,
-    "extend": { "flags": [ "NIGHT_INVISIBILITY" ] }
+    "extend": { "flags": [ "NIGHT_INVISIBILITY" ] },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -262,7 +273,8 @@
         "no_dmg_msg_u": "%s secretes a chemical, but it washes off your armor!",
         "no_dmg_msg_npc": "%s secretes a chemical onto <npcname>, but it washes off their armor!"
       }
-    ]
+    ],
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -272,7 +284,8 @@
     "copy-from": "mon_sc_slime",
     "color": "magenta",
     "proportional": { "speed": 3, "attack_cost": 1.5 },
-    "relative": { "dodge": 3 }
+    "relative": { "dodge": 3 },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -290,7 +303,8 @@
         "cooldown": 10,
         "monster_message": "%1$s boosts the speed of itself and its nearby allies!"
       }
-    ]
+    ],
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -318,7 +332,8 @@
       "message": "As the amoeba slime dies, the nearby amoeba slimes appear weakened.",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_amoeba_slime", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -348,7 +363,8 @@
         "no_dmg_msg_u": "%1$s lunges at you and tries to bite your %2$s, but fails to penetrate armor!",
         "no_dmg_msg_npc": "%1$s lunges at <npcname> and tries to bite, but fails to penetrate armor!"
       }
-    ]
+    ],
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -381,7 +397,8 @@
         "prefer_leap": true,
         "max_consider_range": 3
       }
-    ]
+    ],
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -408,7 +425,8 @@
         "cooldown": 6,
         "monster_message": ""
       }
-    ]
+    ],
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -419,7 +437,8 @@
     "color": "cyan",
     "proportional": { "speed": 1.2 }, 
     "relative": { "dodge": 1 },
-    "extend": { "flags": [ "SWIMS", "WATER_CAMOUFLAGE" ] }
+    "extend": { "flags": [ "SWIMS", "WATER_CAMOUFLAGE" ] },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -428,7 +447,8 @@
     "name": "glowing slime",
     "description": "A gelatinous slime that appears to glow in the dark.",
     "copy-from": "mon_sc_slime",
-    "luminance": 5
+    "luminance": 5,
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -452,7 +472,8 @@
         "cooldown": 10,
         "monster_message": "%1$s releases chunks of hot molten rock!"
       }
-    ]
+    ],
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -468,7 +489,8 @@
     "armor_bullet": 15,
     "armor_acid": 25,
     "armor_elec": 50,
-    "bleed_rate": 15
+    "bleed_rate": 15,
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -484,7 +506,8 @@
     "armor_bullet": 9,
     "armor_acid": 15,
     "armor_elec": 10,
-    "bleed_rate": 15
+    "bleed_rate": 15,
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -499,7 +522,8 @@
     "armor_cut": 0,
     "armor_bullet": 10,
     "armor_acid": 15,
-    "armor_elec": 2
+    "armor_elec": 2,
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -524,7 +548,8 @@
         "monster_message": "%1$s releases shards of diamond in all directions!"
       }
     ],
-    "extend": { "flags": [ "ACIDPROOF" ] }
+    "extend": { "flags": [ "ACIDPROOF" ] },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -547,7 +572,8 @@
         "accuracy": 5,
         "damage_max_instance": [ { "damage_type": "bash", "amount": 10 } ]
       }   
-    ]
+    ],
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -564,7 +590,8 @@
     "path_settings": { "max_dist": 30, "avoid_traps": true, "avoid_sharp": true, "allow_open_doors": true },
     "extend": {
       "flags": [ "PATH_AVOID_DANGER_1", "SMELLS", "CLIMBS", "CAN_OPEN_DOORS" ]
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -589,6 +616,24 @@
       "message": "The %s's body melts away.",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_sc_friendly_slime", "min_level": 10 }
-    }
+    },
+    "upgrades": false
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_tough_slime",
+    "name": "tough slime",
+    "description": "A green gelatinous slime, whose jelly mass is quite denser than usual.",
+    "copy-from": "mon_sc_slime",
+    "material": [ "slime" ],
+    "color": "green",
+    "relative": {
+      "armor_bash": 5,
+      "armor_cut": 4,
+      "armor_stab": 3,
+      "armor_acid": 4,
+      "armor_elec": 6
+    },
+    "upgrades": false
   }
 ]

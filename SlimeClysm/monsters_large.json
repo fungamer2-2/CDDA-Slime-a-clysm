@@ -20,7 +20,8 @@
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split", "hit_self": true }
     },
-    "extend": { "flags": [ "BASHES" ] }
+    "extend": { "flags": [ "BASHES" ] },
+    "upgrades": { "into_group": "GROUP_SLIME_UPGRADE_LARGE", "half_life": 30 }
   },
   {
     "type": "MONSTER",
@@ -34,7 +35,8 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_red", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -50,7 +52,8 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_orange", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -82,7 +85,8 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_yellow", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -108,7 +112,8 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_cyan", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -134,7 +139,8 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_blue", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -161,7 +167,8 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_purple", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -186,7 +193,8 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_pink", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -200,7 +208,8 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_transparent", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -225,7 +234,8 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_dasher", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -240,7 +250,8 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_black", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -291,7 +302,8 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_dissolver", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -306,7 +318,8 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_speedy", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -354,7 +367,8 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_queen_split", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -377,7 +391,8 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_booster", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -398,7 +413,8 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_rubber", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -413,7 +429,8 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_aqua", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -435,7 +452,8 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_intelligent", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -449,7 +467,8 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_glowing", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -470,7 +489,8 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_polymer", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -500,7 +520,8 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_diamond", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -528,7 +549,8 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_stone", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -548,7 +570,8 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_non_newtonian", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -577,7 +600,8 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_lava", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   
   {
@@ -623,7 +647,8 @@
       "message": "As the %s melts away, a bunch of slime hoppers come out from its body!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_leaper", "hit_self": true }
-    }
+    },
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -655,6 +680,24 @@
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split_drainer", "hit_self": true }
-    }
+    },
+    "upgrades": false
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_tough_slime_large",
+    "name": "large_tough slime",
+    "description": "A green gelatinous slime, whose jelly mass is quite denser than usual.",
+    "copy-from": "mon_sc_slime",
+    "material": [ "slime" ],
+    "color": "green",
+    "relative": {
+      "armor_bash": 5,
+      "armor_cut": 4,
+      "armor_stab": 3,
+      "armor_acid": 4,
+      "armor_elec": 6
+    },
+    "upgrades": false  
   }
 ]

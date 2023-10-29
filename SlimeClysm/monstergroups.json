@@ -112,13 +112,13 @@
       { "monster": "mon_sc_slime", "weight": 180, "cost_multiplier": 0 },
       { "monster": "mon_sc_slime", "weight": 2, "cost_multiplier": 3, "pack_size": [ 3, 6 ] }, 
       { "monster": "mon_sc_slime", "weight": 2, "cost_multiplier": 6, "pack_size": [ 5, 15 ] },
-      { "monster": "mon_sc_slime_large", "weight": 35, "cost_multiplier": 3 },
-      { "monster": "mon_sc_intelligent_slime", "weight": 20, "cost_multiplier": 3, "starts": "6 days" },
-      { "monster": "mon_sc_intelligent_slime_large", "weight": 2, "cost_multiplier": 6, "starts": "6 days" },
-      { "group": "GROUP_SLIME_SPECIAL", "weight": 35 },
-      { "group": "GROUP_LARGE_SLIME_SPECIAL", "weight": 6, "cost_multiplier": 3 },
-      { "monster": "mon_sc_slime_biter", "weight": 15, "starts": "2 days" },
-      { "monster": "mon_sc_slime_hopper", "weight": 30, "starts": "1 days" }
+      { "monster": "mon_sc_slime_large", "weight": 15, "cost_multiplier": 3 },
+      { "monster": "mon_sc_intelligent_slime", "weight": 10, "cost_multiplier": 3, "starts": "6 days" },
+      { "monster": "mon_sc_intelligent_slime_large", "weight": 1, "cost_multiplier": 6, "starts": "6 days" },
+      { "group": "GROUP_SLIME_SPECIAL", "weight": 17 },
+      { "group": "GROUP_LARGE_SLIME_SPECIAL", "weight": 3, "cost_multiplier": 3 },
+      { "monster": "mon_sc_slime_biter", "weight": 10, "starts": "2 days" },
+      { "monster": "mon_sc_slime_hopper", "weight": 20, "starts": "1 days" }
     ]
   },
   {
@@ -247,6 +247,26 @@
       { "monster": "mon_sc_intelligent_slime_large", "weight": 1, "cost_multiplier": 6 },
       { "monster": "mon_sc_red_slime", "weight": 9, "cost_multiplier": 3 },
       { "monster": "mon_sc_red_slime_large", "weight": 1, "cost_multiplier": 6 }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "name": "GROUP_SLIME_UPGRADE",
+    "monsters": [
+      { "monster": "mon_sc_tough_slime", "weight": 100 },
+      { "monster": "mon_sc_intelligent_slime": "weight": 10 },
+      { "monster": "mon_sc_red_slime", "weight": 15 },
+      { "monster": "mon_sc_pink_slime", "weight": 3 }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "name": "GROUP_SLIME_UPGRADE_LARGE",
+    "monsters": [
+      { "monster": "mon_sc_tough_slime_large", "weight": 100 },
+      { "monster": "mon_sc_intelligent_slime_large", "weight": 10 },
+      { "monster": "mon_sc_red_slime", "weight": 15 },
+      { "monster": "mon_sc_pink_slime", "weight": 3 }
     ]
   }
 ]
