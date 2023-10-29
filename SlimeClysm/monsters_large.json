@@ -627,9 +627,9 @@
   },
   {
     "type": "MONSTER",
-    "id": "mon_sc_large_slime_drainer",
+    "id": "mon_sc_slime_drainer_large",
     "name": "large slime drainer",
-    "description": "A dark purple gelatinous slime, moving gradually across the ground. It latches onto its target and feed on its energy to heal.",
+    "description": "A large dark purple gelatinous slime, moving gradually across the ground. It latches onto its target and feed on its energy to heal.",
     "copy-from": "mon_sc_slime_large",
     "color": "magenta_red",
     "grab_strength": 4,
