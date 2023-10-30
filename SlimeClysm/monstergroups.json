@@ -254,7 +254,7 @@
     "name": "GROUP_SLIME_UPGRADE",
     "monsters": [
       { "monster": "mon_sc_tough_slime", "weight": 100 },
-      { "monster": "mon_sc_intelligent_slime": "weight": 10 },
+      { "monster": "mon_sc_intelligent_slime", "weight": 10 },
       { "monster": "mon_sc_red_slime", "weight": 15 },
       { "monster": "mon_sc_pink_slime", "weight": 3 }
     ]
