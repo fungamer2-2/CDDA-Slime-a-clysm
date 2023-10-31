@@ -70,7 +70,8 @@
       { "monster": "mon_sc_dissolver_slime", "weight": 35, "starts": "2 days" },
       { "monster": "mon_sc_lava_slime", "weight": 8, "starts": "7 days", "cost_multiplier": 4 },
       { "monster": "mon_sc_glowing_slime", "weight": 30 },
-      { "monster": "mon_sc_slime_drainer", "weight": 9, "starts": "7 days", "cost_multiplier": 3 }
+      { "monster": "mon_sc_slime_drainer", "weight": 9, "starts": "7 days", "cost_multiplier": 3 },
+      { "monster": "mon_sc_slime_constrictor", "weight": 10, "starts": "2 days", "cost_multiplier": 2 }
     ]
   },
   {
@@ -83,7 +84,8 @@
       { "monster": "mon_sc_lava_slime_large", "weight": 8, "starts": "7 days", "cost_multiplier": 4 },
       { "monster": "mon_sc_glowing_slime_large", "weight": 30 },
       { "monster": "mon_sc_slime_drainer_large", "weight": 9, "starts": "7 days", "cost_multiplier": 3 },
-      { "monster": "mon_sc_giant_slime_leaper", "weight": 5, "cost_multiplier": 4, "starts": "10 days" }
+      { "monster": "mon_sc_giant_slime_leaper", "weight": 5, "cost_multiplier": 4, "starts": "10 days" },
+      { "monster": "mon_sc_slime_constrictor_large", "weight": 10, "starts": "2 days", "cost_multiplier": 2 }   
     ]
   },
   {
@@ -256,7 +258,8 @@
       { "monster": "mon_sc_tough_slime", "weight": 100 },
       { "monster": "mon_sc_intelligent_slime", "weight": 10 },
       { "monster": "mon_sc_red_slime", "weight": 15 },
-      { "monster": "mon_sc_pink_slime", "weight": 3 }
+      { "monster": "mon_sc_pink_slime", "weight": 3 },
+      { "monster": "mon_sc_slime_constrictor", "weight": 8 }
     ]
   },
   {
@@ -265,8 +268,9 @@
     "monsters": [
       { "monster": "mon_sc_tough_slime_large", "weight": 100 },
       { "monster": "mon_sc_intelligent_slime_large", "weight": 10 },
-      { "monster": "mon_sc_red_slime", "weight": 15 },
-      { "monster": "mon_sc_pink_slime", "weight": 3 }
+      { "monster": "mon_sc_red_slime_large", "weight": 15 },
+      { "monster": "mon_sc_pink_slime_large", "weight": 3 },
+      { "monster": "mon_sc_slime_constrictor_large", "weight": 8 }
     ]
   }
 ]

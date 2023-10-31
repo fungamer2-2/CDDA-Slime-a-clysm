@@ -635,5 +635,51 @@
       "armor_elec": 6
     },
     "upgrades": false
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_slime_constrictor",
+    "name": "slime constrictor",
+    "description": "A green gelatinous slime, that attempts to deal damagw by wrapping their target, then squeezing them.",
+    "copy-from": "mon_sc_slime",
+    "material": [ "slime" ],
+    "color": "green",
+    "grab_strength": 3,
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "attack_type": "melee",
+        "id": "wrap",
+        "cooldown": 4,
+        "accuracy": 4,
+        "blockable": false,
+        "effects_require_dmg": false,
+        "damage_max_instance": [ { "damage_type": "bash", "amount": 0 } ],
+        "self_effects_always": [ { "id": "grabbing", "duration": 86400 } ],
+        "effects": [ { "id": "grabbed", "duration": 86400, "intensity": 3, "affect_hit_bp": true } ],
+        "body_parts": [ [ "torso", 1 ] ],
+        "forbidden_effects_any": [ "grabbing" ],
+        "no_dmg_msg_u": "%s wraps around you!",
+        "no_dmg_msg_npc": "%s wraps around <npcname>!",
+        "miss_msg_u": "%s tries to wrap around you, but you dodge!",
+        "miss_msg_npc": "%s tries to wrap around <npcname>, but they dodge!"
+      },
+      {
+        "type": "monster_attack",
+        "attack_type": "melee",
+        "id": "constrict",
+        "move_cost": 50,
+        "dodgeable": false,
+        "blockable": false,
+        "damage_max_instance": [ { "damage_type": "bash", "amount": 6, "armor_multiplier": 0.35 } ],
+        "body_parts": [ [ "torso", 1 ] ],
+        "required_effects_any": [ "grabbing" ],
+        "hit_dmg_u": "%s squeezes you!",
+        "hit_dmg_npc": "%s squeezes <npcname>!",
+        "no_dmg_msg_u": "%s squeezes you, but your armor protects you.",
+        "no_dmg_msg_npc": "%s squeezes <npcname>, but their armor protects them."
+      }
+    ],
+    "upgrades": false
   }
 ]

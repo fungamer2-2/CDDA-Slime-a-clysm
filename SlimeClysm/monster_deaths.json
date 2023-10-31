@@ -246,6 +246,22 @@
     "effect_str": "mon_sc_slime_drainer"
   },
   {
+    "id": "death_large_slime_split_tough",
+    "type": "SPELL",
+    "name": "Tough Slime Split (large)",
+    "description": "The large tough slime splits into two normal-sized tough slimes.",
+    "copy-from": "death_base_slime_split",
+    "effect_str": "mon_sc_tough_slime"
+  },
+  {
+    "id": "death_large_slime_split_constrictor",
+    "type": "SPELL",
+    "name": "Slime Constrictor Split (large)",
+    "description": "The large slime constrictor splits into two normal-sized slime constrictors.",
+    "copy-from": "death_base_slime_split",
+    "effect_str": "mon_sc_slime_constrictor"
+  },
+  {
     "id": "death_amoeba_slime",
     "type": "SPELL",
     "name": "Amoeba Slime Death",
