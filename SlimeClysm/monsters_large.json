@@ -20,6 +20,7 @@
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_large_slime_split", "hit_self": true }
     },
+    "death_drops": { },
     "extend": { "flags": [ "BASHES" ] },
     "upgrades": { "into_group": "GROUP_SLIME_UPGRADE_LARGE", "half_life": 30 }
   },
@@ -368,6 +369,7 @@
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_queen_split", "hit_self": true }
     },
+    "death_drops": "slime_sample_huge",
     "upgrades": false
   },
   {

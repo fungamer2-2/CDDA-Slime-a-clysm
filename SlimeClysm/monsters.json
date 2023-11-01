@@ -43,6 +43,7 @@
     "armor_acid": 0,
     "armor_elec": 2,
     "bleed_rate": 30,
+    "death_drops": "slime_mon_drops",
     "upgrades": { "into_group": "GROUP_SLIME_UPGRADE", "half_life": 30 }
   },
   {
@@ -595,32 +596,6 @@
   },
   {
     "type": "MONSTER",
-    "id": "mon_sc_friendly_slime",
-    "name": "friendly slime",
-    "description": "This slime has recognized you as a friend, and stays by to protect you.",
-    "copy-from": "mon_sc_slime",
-    "looks_like": "mon_sc_slime",
-    "default_faction": "player",
-    "speed": 70,
-    "vision_day": 40,
-    "regenerates": 1,
-    "tracking_distance": 3,
-    "melee_skill": 4,
-    "melee_dice": 3,
-    "melee_dice_sides": 3,
-    "armor_bash": 9,
-    "armor_stab": 7,
-    "armor_acid": 9,
-    "armor_elec": 3,
-    "death_function": { 
-      "message": "The %s's body melts away.",
-      "corpse_type": "NO_CORPSE",
-      "effect": { "id": "death_sc_friendly_slime", "min_level": 10 }
-    },
-    "upgrades": false
-  },
-  {
-    "type": "MONSTER",
     "id": "mon_sc_tough_slime",
     "name": "tough slime",
     "description": "A green gelatinous slime, whose jelly mass is quite denser than usual.",
@@ -680,6 +655,33 @@
         "no_dmg_msg_npc": "%s squeezes <npcname>, but their armor protects them."
       }
     ],
+    "upgrades": false
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_friendly_slime",
+    "name": "friendly slime",
+    "description": "This slime has recognized you as a friend, and stays by to protect you.",
+    "copy-from": "mon_sc_slime",
+    "looks_like": "mon_sc_slime",
+    "default_faction": "player",
+    "speed": 70,
+    "vision_day": 40,
+    "regenerates": 1,
+    "tracking_distance": 3,
+    "melee_skill": 4,
+    "melee_dice": 3,
+    "melee_dice_sides": 3,
+    "armor_bash": 9,
+    "armor_stab": 7,
+    "armor_acid": 9,
+    "armor_elec": 3,
+    "death_function": { 
+      "message": "The %s's body melts away.",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_sc_friendly_slime", "min_level": 10 }
+    },
+    "death_drops": { },
     "upgrades": false
   }
 ]

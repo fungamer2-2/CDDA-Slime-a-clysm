@@ -30,5 +30,13 @@
     "extend": {
       "items": [ [ "iv_mutagen_slime", 8 ] ]
     }
+  },
+  {
+    "type": "item_group",
+    "id": "slime_mon_drops",
+    "subtype": "collection",
+    "entries": [
+      { "item": "slime_scrap", "prob": 8 }
+    ]
   }
 ]
