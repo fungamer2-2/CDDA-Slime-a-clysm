@@ -7,7 +7,7 @@
     "proportional": { "hp": 2.0, "volume": 2.0, "weight": 2.0, "speed": 1.25, "attack_cost": 1.25 },
     "description": "A large green gelatinous slime, moving gradually across the ground.",
     "symbol": "O",
-    "melee_skill": 5,
+    "melee_skill": 6,
     "melee_dice": 3,
     "melee_dice_sides": 3,
     "armor_bash": 6,
@@ -706,6 +706,30 @@
       "effect": { "id": "death_large_slime_split_tough", "hit_self": true }
     },
     "upgrades": false  
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_toxic_slime_large",
+    "name": "toxic slime",
+    "description": "A black slime, which appears to be made of some sort of sludgy substance. It also appears to release gas that is probably toxic.",
+    "copy-from": "mon_sc_slime_large",
+    "material": [ "slime" ],
+    "color": "black",
+    "attack_effs": [
+      { "id": "poison", "duration": 300 },
+      { "id": "badpoison", "duration": 450, "chance": 15 }
+    ],
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "id": "toxic_gas",
+        "attack_type": "spell",
+        "spell_data": { "id": "toxic_gas", "hit_self": true },
+        "cooldown": 10,
+        "monster_message": "%1$s releases a cloud of toxic gas!"
+      }
+    ],
+    "upgrades": false
   },
   {
     "type": "MONSTER",

@@ -382,5 +382,21 @@
     "effect": "attack",
     "shape": "blast",
     "flags": [ "SILENT", "NO_EXPLOSION_SFX", "RANDOM_DAMAGE" ]
+  },
+  {
+    "id": "toxic_gas",
+    "type": "SPELL",
+    "name": "Toxic Gas",
+    "description": "Creates a cloud of toxic gas.",
+    "valid_targets": [ "hostile", "ally", "ground" ],
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "effect": "attack",
+    "shape": "blast",
+    "field_id": "fd_toxic_gas",
+    "min_field_intensity": 1,
+    "max_field_intensity": 1,
+    "field_chance": 3,
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ]
   }
 ]
