@@ -710,8 +710,8 @@
   {
     "type": "MONSTER",
     "id": "mon_sc_toxic_slime_large",
-    "name": "toxic slime",
-    "description": "A black slime, which appears to be made of some sort of sludgy substance. It also appears to release gas that is probably toxic.",
+    "name": "large toxic slime",
+    "description": "A large black slime, which appears to be made of some sort of sludgy substance. It also appears to release gas that is probably toxic.",
     "copy-from": "mon_sc_slime_large",
     "material": [ "slime" ],
     "color": "black",
