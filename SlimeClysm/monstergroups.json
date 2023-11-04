@@ -280,9 +280,9 @@
     "name": "GROUP_TOXIC_WASTE",
     "override": true,
     "monsters": [
-      { "monster": "mon_null", "weight": 70 },
+      { "monster": "mon_null", "weight": 80 },
       { "monster": "mon_sc_toxic_slime", "weight": 30 },
-      { "monster": "mon_sc_toxic_slime_large": "weight": 3, "cost_multiplier": 3 }
+      { "monster": "mon_sc_toxic_slime_large", "weight": 3, "cost_multiplier": 3 }
     ]
   }
 ]
