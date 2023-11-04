@@ -24,6 +24,15 @@
     ]
   },
   {
+    "type": "effect_on_condition",
+    "id": "EOC_empty_canister",
+    "global": true,
+    "effect": [
+      { "u_consume_item": "canister_goo" },
+      { "u_spawn_item": "canister_empty" }
+    ]
+  },
+  {
     "id": "canister_goo",
     "type": "TOOL",
     "name": { "str": "goo canister" },
@@ -37,11 +46,6 @@
     "material": [ "steel" ],
     "symbol": ";",
     "color": "dark_gray",
-    "initial_charges": 1,
-    "max_charges": 1,
-    "charges_per_use": 1,
-    "flags": [ "SINGLE_USE" ],
-    "//": "I would rather have an empty container instead of deleting the canister itself, but in 0.G stable, there doesn't seem to be a way to suppress the popup message from 'u_spawn_item' that says 'X gives you Y.'",
     "use_action": {
       "type": "effect_on_conditions",
       "description": "Pour out.",
@@ -50,6 +54,11 @@
         {
           "id": "EOC_friendly_slime_spawn",
           "effect": [
+            {
+              "//": "This is a bit of a hack to prevent the popup message from 'u_spawn_item' since 0.G stable doesn't have a way to suppress it, so I made a global EOC and used queue_eocs",
+              "queue_eocs": [ "EOC_empty_canister" ],
+              "time_in_future": "0 seconds"
+            },
             {
               "u_spawn_monster": "mon_sc_friendly_slime",
               "real_count": 1,

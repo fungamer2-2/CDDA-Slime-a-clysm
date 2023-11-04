@@ -706,6 +706,8 @@
       "effect": { "id": "death_sc_friendly_slime", "min_level": 10 }
     },
     "death_drops": { },
+    "//": "So that it may keep following when out of direct line of sight",
+    "extend": { "flags": [ "SMELLS" ] },
     "upgrades": false
   }
 ]
