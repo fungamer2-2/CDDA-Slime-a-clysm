@@ -11,13 +11,15 @@
   "tiles-new": [
     {
       "file": "tileset.png",
-      "//": "range 0 to 3",
+      "//": "range 0 to 5",
       "sprite_offset_y": -4,
       "tiles": [
         { "id": "mon_sc_slime", "fg": 0, "rotates": false },
         { "id": "mon_sc_red_slime", "fg": 1, "rotates": false },
         { "id": "mon_sc_orange_slime", "fg": 2, "rotates": false },
-        { "id": "mon_sc_yellow_slime", "fg": 3, "rotates": false }
+        { "id": "mon_sc_yellow_slime", "fg": 3, "rotates": false },
+        { "id": "mon_sc_cyan_slime", "fg": 4, "rotates": false },
+        { "id": "mon_sc_blue_slime", "fg": 5, "rotates": false }
       ]
     },
     {
@@ -26,10 +28,10 @@
       "sprite_height": 48,
       "sprite_offset_x": -8,
       "sprite_offset_y": -16,
-      "//": "range 4 to 5",
+      "//": "range 6 to 7",
       "tiles": [
-        { "id": "mon_sc_slime_large", "fg": 4, "rotates": false },
-        { "id": "mon_sc_red_slime_large", "fg": 5, "rotates": false }
+        { "id": "mon_sc_slime_large", "fg": 6, "rotates": false },
+        { "id": "mon_sc_red_slime_large", "fg": 7, "rotates": false }
       ]
     }
   ]
