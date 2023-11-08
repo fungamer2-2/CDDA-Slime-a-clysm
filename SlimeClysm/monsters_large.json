@@ -4,7 +4,7 @@
     "id": "mon_sc_slime_large",
     "name": "large slime",
     "copy-from": "mon_sc_slime",
-    "proportional": { "hp": 2.0, "volume": 2.0, "weight": 2.0, "speed": 1.25, "attack_cost": 1.25 },
+    "proportional": { "hp": 2.0, "volume": 2.0, "weight": 2.0, "speed": 1.25 },
     "description": "A large green gelatinous slime, moving gradually across the ground.",
     "symbol": "O",
     "melee_skill": 6,
@@ -264,24 +264,7 @@
     "grab_strength": 6,
     "//": "Note: Grabs have been reworked in 0.H experimental, so the value of grab_strength will need to be changed to reflect that.",
     "special_attacks": [
-      {
-        "type": "monster_attack",
-        "attack_type": "melee",
-        "id": "wrap2",
-        "cooldown": 5,
-        "accuracy": 6,
-        "blockable": false,
-        "effects_require_dmg": false,
-        "damage_max_instance": [ { "damage_type": "bash", "amount": 0 } ],
-        "self_effects_always": [ { "id": "grabbing", "duration": 86400 } ],
-        "effects": [ { "id": "grabbed", "duration": 86400, "intensity": 6, "affect_hit_bp": true } ],
-        "body_parts": [ [ "torso", 1 ] ],
-        "forbidden_effects_any": [ "grabbing" ],
-        "no_dmg_msg_u": "%s wraps around you!",
-        "no_dmg_msg_npc": "%s wraps around <npcname>!",
-        "miss_msg_u": "%s tries to wrap around you, but you dodge!",
-        "miss_msg_npc": "%s tries to wrap around <npcname>, but they dodge!"
-      },
+      { "id": "large_slime_wrap" },
       {
         "type": "monster_attack",
         "attack_type": "melee",
@@ -688,16 +671,16 @@
   {
     "type": "MONSTER",
     "id": "mon_sc_tough_slime_large",
-    "name": "large_tough slime",
+    "name": "large tough slime",
     "description": "A green gelatinous slime, whose jelly mass is quite denser than usual.",
     "copy-from": "mon_sc_slime",
     "material": [ "slime" ],
     "color": "green",
     "relative": {
-      "armor_bash": 5,
-      "armor_cut": 4,
-      "armor_stab": 3,
-      "armor_acid": 4,
+      "armor_bash": 7,
+      "armor_cut": 5,
+      "armor_stab": 4,
+      "armor_acid": 5,
       "armor_elec": 6
     },
     "death_function": {
@@ -706,6 +689,46 @@
       "effect": { "id": "death_large_slime_split_tough", "hit_self": true }
     },
     "upgrades": false  
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_sc_forest_slime_large",
+    "name": "large forest slime",
+    "description": "A large dark green slime creature of the forest, a bit tougher than normal slizes, and has long slime tendrils that could lash at targets from a distance.",
+    "copy-from": "mon_sc_slime_large",
+    "material": [ "slime" ],
+    "color": "green_white",
+    "relative": {
+      "armor_bash": 3,
+      "armor_cut": 2,
+      "armor_stab": 1,
+      "armor_acid": 3,
+      "armor_elec": 4,
+      "melee_skill": 2,
+      "melee_dice_sides": 1,
+      "dodge": 1
+    },
+    "proportional": { "hp": 1.1, "speed": 1.1, "attack_cost": 0.8 },
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "attack_type": "melee", 
+        "id": "slime_tendril",
+        "cooldown": 8,
+        "range": 4,
+        "damage_max_instance": [ 
+          { "damage_type": "bash", "amount": 13 },
+          { "damage_type": "cut", "amount": 3, "min_mul": 0.0 }
+        ],
+        "hit_dmg_u": "%1$s lashes a slime tendril out and hits your %2$s!",
+        "hit_dmg_npc": "%1$s lashes a slime tendril out and hits <npcname>!",
+        "miss_msg_u": "%1$s lashes a slime tendril out at you, but you dodge!",
+        "miss_msg_npc": "%1$s lashes a slime tendril at <npcname>, but they dodge!",
+        "no_dmg_msg_u": "%1$s lashes a slime tendril out at you, but your armor protects you.",
+        "no_dmg_msg_npc": "%1$s lashes a slime tendril at <npcname>, but is stopped by their armor."
+      }   
+    ],
+    "upgrades": false
   },
   {
     "type": "MONSTER",
@@ -741,24 +764,7 @@
     "color": "green",
     "grab_strength": 6,
     "special_attacks": [
-      {
-        "type": "monster_attack",
-        "attack_type": "melee",
-        "id": "wrap",
-        "cooldown": 4,
-        "accuracy": 7,
-        "blockable": false,
-        "effects_require_dmg": false,
-        "damage_max_instance": [ { "damage_type": "bash", "amount": 0 } ],
-        "self_effects_always": [ { "id": "grabbing", "duration": 86400 } ],
-        "effects": [ { "id": "grabbed", "duration": 86400, "intensity": 6, "affect_hit_bp": true } ],
-        "body_parts": [ [ "torso", 1 ] ],
-        "forbidden_effects_any": [ "grabbing" ],
-        "no_dmg_msg_u": "%s wraps around you!",
-        "no_dmg_msg_npc": "%s wraps around <npcname>!",
-        "miss_msg_u": "%s tries to wrap around you, but you dodge!",
-        "miss_msg_npc": "%s tries to wrap around <npcname>, but they dodge!"
-      },
+      { "id": "large_slime_wrap", "cooldown": 4, "accuracy": 7 },
       {
         "type": "monster_attack",
         "attack_type": "melee",

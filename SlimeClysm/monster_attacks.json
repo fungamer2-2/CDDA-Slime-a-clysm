@@ -1,0 +1,38 @@
+[
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "slime_wrap",
+    "cooldown": 5,
+    "accuracy": 4,
+    "blockable": false,
+    "effects_require_dmg": false,
+    "damage_max_instance": [ { "damage_type": "bash", "amount": 0 } ],
+    "self_effects_always": [ { "id": "grabbing", "duration": 86400 } ],
+    "effects": [ { "id": "grabbed", "duration": 86400, "intensity": 3, "affect_hit_bp": true } ],
+    "body_parts": [ [ "torso", 1 ] ],
+    "forbidden_effects_any": [ "grabbing" ],
+    "no_dmg_msg_u": "%s wraps around you!",
+    "no_dmg_msg_npc": "%s wraps around <npcname>!",
+    "miss_msg_u": "%s tries to wrap around you, but you dodge!",
+    "miss_msg_npc": "%s tries to wrap around <npcname>, but they dodge!"
+  },
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "large_slime_wrap",
+    "cooldown": 5,
+    "accuracy": 6,
+    "blockable": false,
+    "effects_require_dmg": false,
+    "damage_max_instance": [ { "damage_type": "bash", "amount": 0 } ],
+    "self_effects_always": [ { "id": "grabbing", "duration": 86400 } ],
+    "effects": [ { "id": "grabbed", "duration": 86400, "intensity": 6, "affect_hit_bp": true } ],
+    "body_parts": [ [ "torso", 1 ] ],
+    "forbidden_effects_any": [ "grabbing" ],
+    "no_dmg_msg_u": "%s wraps around you!",
+    "no_dmg_msg_npc": "%s wraps around <npcname>!",
+    "miss_msg_u": "%s tries to wrap around you, but you dodge!",
+    "miss_msg_npc": "%s tries to wrap around <npcname>, but they dodge!"
+  }
+]

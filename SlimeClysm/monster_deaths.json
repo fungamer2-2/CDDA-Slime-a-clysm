@@ -262,22 +262,6 @@
     "effect_str": "mon_sc_slime_constrictor"
   },
   {
-    "id": "death_amoeba_slime",
-    "type": "SPELL",
-    "name": "Amoeba Slime Death",
-    "description": "The amoeba slime dies",
-    "valid_targets": [ "ally" ],
-    "targeted_monster_ids": [ "mon_sc_amoeba_slime" ],
-    "min_damage": 0,
-    "max_damage": 70,
-    "min_aoe": 1,
-    "max_aoe": 4,
-    "damage_type": "pure",
-    "effect": "attack",
-    "shape": "blast",
-    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "PERCENTAGE_DAMAGE", "RANDOM_DAMAGE", "RANDOM_AOE", "NO_PROJECTILE" ]
-  },
-  {
     "id": "death_large_slime_split_leaper",
     "type": "SPELL",
     "name": "Giant Slime Leaper Split (large)",
@@ -287,5 +271,51 @@
     "effect_str": "mon_sc_slime_hopper",
     "min_damage": 4,
     "max_damage": 8
+  },
+  {
+    "id": "death_amoeba_slime",
+    "type": "SPELL",
+    "name": "Amoeba Slime Death",
+    "description": "The amoeba slime dies",
+    "valid_targets": [ "ally" ],
+    "targeted_monster_ids": [ "mon_sc_amoeba_slime" ],
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_amoeba_slime_weaken",
+    "shape": "blast",
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "PERCENTAGE_DAMAGE", "RANDOM_DAMAGE", "RANDOM_AOE" ]
+  },
+  {
+    "id": "amoeba_slime_damage",
+    "type": "SPELL",
+    "name": "Amoeba Slime Damage",
+    "description": "A nearby amoeba slime died, so this amoeba slime is also damaged.",
+    "valid_targets": [ "self" ],
+    "min_damage": 1,
+    "max_damage": 18,
+    "damage_type": "pure",
+    "effect": "attack",
+    "shape": "blast",
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "RANDOM_DAMAGE", "NO_PROJECTILE" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_amoeba_slime_weaken",
+    "condition": { "not": { "one_in_chance": 4 } },
+    "effect": [
+      { "u_cast_spell": { "id": "amoeba_slime_damage", "hit_self": true } },
+      {
+        "run_eocs": [
+          {
+            "id": "disable_reprod",
+            "condition": { "one_in_chance": 4 },
+            "effect": [
+              { "u_add_effect": "amoeba_slime_no_reproduce", "duration": [ 1, 15 ] }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]

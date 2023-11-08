@@ -177,7 +177,8 @@
     "id": "EOC_amoeba_spawn",
     "condition": {
       "and": [
-        { "one_in_chance": 2 },
+        { "one_in_chance": 3 },
+        { "not": { "npc_has_effect": "amoeba_slime_no_reproduce" } },
         { "compare_int": [ { "u_val": "pos_z" }, "==", { "npc_val": "pos_z" } ] },
         { 
           "or": [
@@ -185,7 +186,7 @@
             { "not": { "or": [ "u_is_outside", "npc_is_outside" ] } }
           ]
         },
-        { "compare_int": [ { "distance": [ "u", "npc" ] }, "<", { "arithmetic": [ { "const": 1 }, "+", { "rand": 4 } ] } ] }
+        { "compare_int": [ { "distance": [ "u", "npc" ] }, "<=", { "arithmetic": [ { "const": 1 }, "+", { "rand": 3 } ] } ] }
       ]
     },
     "effect": [
