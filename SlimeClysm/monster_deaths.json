@@ -262,6 +262,22 @@
     "effect_str": "mon_sc_slime_constrictor"
   },
   {
+    "id": "death_large_slime_split_toxic",
+    "type": "SPELL",
+    "name": "Toxic Slime Split (large)",
+    "description": "The large toxic slime splits into two normal-sized toxic slimes.",
+    "copy-from": "death_base_slime_split",
+    "effect_str": "mon_sc_toxic_slime"
+  },
+  {
+    "id": "death_large_slime_split_forest",
+    "type": "SPELL",
+    "name": "Forest Slime Split (large)",
+    "description": "The large forest slime splits into two normal-sized forest slimes.",
+    "copy-from": "death_base_slime_split",
+    "effect_str": "mon_sc_forest_slime"
+  },
+  {
     "id": "death_large_slime_split_leaper",
     "type": "SPELL",
     "name": "Giant Slime Leaper Split (large)",

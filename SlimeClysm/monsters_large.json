@@ -728,6 +728,11 @@
         "no_dmg_msg_npc": "%1$s lashes a slime tendril at <npcname>, but is stopped by their armor."
       }   
     ],
+    "death_function": {
+      "message": "The %s splits in two!",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_large_slime_split_forest", "hit_self": true }
+    },
     "upgrades": false
   },
   {
@@ -752,6 +757,11 @@
         "monster_message": "%1$s releases a cloud of toxic gas!"
       }
     ],
+    "death_function": {
+      "message": "The %s splits in two!",
+      "corpse_type": "NO_CORPSE",
+      "effect": { "id": "death_large_slime_split_toxic", "hit_self": true }
+    },
     "upgrades": false
   },
   {
