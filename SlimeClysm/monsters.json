@@ -504,12 +504,14 @@
     "material": [ "slime", "alien_liquid" ],
     "color": "white",
     "proportional": { "speed": 1.3 },
-    "armor_bash": 20,
+    "armor_bash": 10,
     "armor_cut": 0,
     "armor_bullet": 10,
     "armor_acid": 15,
     "armor_elec": 2,
-    "upgrades": false
+    "upgrades": false,
+    "death_drops": { },
+    "extend": { "flags": [ "PLASTIC" ] }
   },
   {
     "type": "MONSTER",
