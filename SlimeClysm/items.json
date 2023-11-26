@@ -78,5 +78,37 @@
         }
       ]
     }
+  },
+  {
+    "id": "slime_transform_serum",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": { "str": "slime transformation serum" },
+    "description": "A syringe filled with what appears to be a thick, green liquid. Injecting it might cause you to transform into a slime creature.",
+    "looks_like": "flu_shot",
+    "weight": "300 g",
+    "volume": "160ml",
+    "price": 34000,
+    "price_postapoc": 10000,
+    "material": [ "plastic" ],
+    "symbol": "!",
+    "color": "green",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "Inject the serum.",
+      "menu_text": "Inject",
+      "effect_on_conditions": [
+        {
+          "id": "slime_serum_injected",
+          "effect": [
+            { "u_message": "You inject the slime transformation serum." },
+            { "arithmetic": [ { "u_val": "pain" }, "+=", { "const": 3 } ] },
+            { "arithmetic": [ { "u_val": "vitamin", "name": "slime_transform_serum" }, "+=", { "const": 500 } ] },
+            { "arithmetic": [ { "u_val": "vitamin", "name": "slime_transform_serum" }, "+=", { "rand": 1000 } ] }
+          ]
+        }
+      ]
+    },
+    "flags": [ "NO_INGEST", "IRREPLACEABLE_CONSUMABLE" ]
   }
 ]

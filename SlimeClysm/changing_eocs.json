@@ -1,0 +1,139 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_slime_transformation_initiate",
+    "recurrence": [ "5 minutes", "20 minutes" ],
+    "condition": {
+      "and": [ 
+        { "compare_int": [ { "u_val": "vitamin", "name": "slime_transform_serum" }, ">=", { "const": 250 } ] }  
+      ]
+    },
+    "deactivate_condition": { "u_has_flag": "CHANGING_SLIME" },
+    "effect": [
+      {
+        "run_eocs": [
+          {
+            "id": "EOC_slime_transform_init_roll",
+            "condition": {
+              "and": [
+                { "x_in_y_chance": { "x": { "u_val": "vitamin", "name": "slime_transform_serum", "default": 250 }, "y": 2500 } },
+                { "not": { "u_has_flag": "CHANGING_SLIME" } }
+              ]
+            },
+            "effect": [
+              { "run_eocs": [ "EOC_slime_changing_success" ] }
+            ],
+            "false_effect": [
+              { "run_eocs": [ "EOC_slime_changing_fail" ] }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_slime_changing_success",
+    "effect": [
+      { "u_message": "You feel an intense sensation across your entire body as your transformation begins.", "type": "mixed" },
+      { "u_add_trait": "CHANGING_SLIME" },
+      { "u_mutate_category": "SLIME", "use_vitamins": false }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_slime_changing_fail",
+    "condition": {
+      "and": [
+        { "x_in_y_chance": { "x": { "u_val": "vitamin", "name": "slime_transform_serum", "default": 250 }, "y": 1400 } },
+        { "one_in_chance": 3 }
+      ]
+    },
+    "effect": [
+      { "u_message": "You begin to feel a unique sensation across your body, but it fades.", "type": "mixed" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_slime_transformation",
+    "recurrence": [ "5 minutes", "30 minutes" ],
+    "condition": { "u_has_flag": "CHANGING_SLIME" },
+    "deactivate_condition": { "not": { "u_has_flag": "CHANGING_SLIME" } },
+    "effect": [
+      { 
+        "run_eocs": [
+          "EOC_slime_transformation_check"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_slime_transformation_check",
+    "condition": { "compare_int": [ { "u_val": "vitamin", "name": "slime_transform_serum" }, ">=", { "const": 150 } ] },
+    "//": "Temporarily sets slime mutagen high to allow crossing the threshold, then set it back to its original value.",
+    "effect": [
+      { "u_message": "You feel your body morphing and changing...", "type": "mixed" },
+      { "arithmetic": [ { "u_val": "var", "var_name": "tmp_mutagen", "type": "temp", "context": "mutation" }, "=", { "u_val": "vitamin", "name": "mutagen_slime" } ] },
+      { "arithmetic": [ { "u_val": "vitamin", "name": "mutagen_slime" }, "=", { "const": 10000 } ] },
+      { "arithmetic": [ { "u_val": "var", "var_name": "had_thresh", "type": "temp", "context": "mutation" }, "=", { "const": 0 } ] },
+      {
+        "run_eocs": [
+          {
+            "id": "EOC_thresh",
+            "condition": { "u_has_trait": "THRESH_SLIME" },
+            "effect": [
+              { "arithmetic": [ { "u_val": "var", "var_name": "had_thresh", "type": "temp", "context": "mutation" }, "=", { "const": 1 } ] }
+            ]
+          }
+        ]
+      },
+      { "u_mutate": 0, "use_vitamins": true },
+      { "arithmetic": [ { "u_val": "vitamin", "name": "mutagen_slime" }, "=", { "u_val": "var", "var_name": "tmp_mutagen", "type": "temp", "context": "mutation" } ] },
+      { "arithmetic": [ { "u_val": "vitamin", "name": "slime_transform_serum" }, "-=", { "const": 40 } ] },
+      { "arithmetic": [ { "u_val": "vitamin", "name": "slime_transform_serum" }, "-=", { "rand": 60 } ] },
+      { "run_eocs": [ "EOC_slime_threshold_check" ] }
+    ],
+    "false_effect": [
+      {
+        "run_eocs": [
+          {
+            "id": "EOC_slime_transformation_depleted",
+            "condition": {
+              "or": [
+                {
+                  "and": [
+                    { "compare_int": [ { "u_val": "vitamin", "name": "slime_transform_serum" }, "<=", { "rand": 149 } ] },
+                    { "one_in_chance": 3 }
+                  ]
+                },
+                { "one_in_chance": 10 }
+              ]
+            },
+            "effect": [
+              { "u_message": "The sensation across your body fades, as your transformation ends for now.", "type": "bad" },
+              { "arithmetic": [ { "u_val": "vitamin", "name": "slime_transform_serum" }, "=", { "const": 0 } ] },
+              { "u_lose_trait": "CHANGING_SLIME" }
+            ]   
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_slime_threshold_check",
+    "//": "Once you cross the slime threshold, this prints a unique message and gives a morale bonus.",
+    "condition": {
+      "and": [
+        { "u_has_trait": "THRESH_SLIME" },
+        { "compare_int": [ { "u_val": "var", "var_name": "had_thresh", "type": "temp", "context": "mutation" }, "==", { "const": 0 } ] }
+      ]
+    },
+    "effect": [
+      { "u_message": "You feel as though you have become something new... something completely different.", "type": "good" },
+      { "u_message": "You feel free from those rigid human norms, as you are no longer human. You are now a living Slime.", "type": "good" },
+      { "u_add_morale": "morale_feeling_good", "bonus": 30, "max_bonus": 45, "duration": "36 hours", "decay_start": "6 hours" }
+    ]
+  }
+]

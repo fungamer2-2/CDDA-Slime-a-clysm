@@ -4,5 +4,22 @@
     "id": "SLIMEMIND",
     "copy-from": "SLIMEMIND",
     "extend": { "moncams": [ [ "mon_sc_friendly_slime", 30 ] ] }
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_SLIME",
+    "copy-from": "THRESH_SLIME",
+    "anger_relations": [ [ "SLIME", -40 ] ]
+  },
+  {
+    "type": "mutation",
+    "id": "CHANGING_SLIME",
+    "name": { "str": "Slime Transformation" },
+    "points": 0,
+    "player_display": false,
+    "purifiable": false,
+    "valid": false,
+    "description": "You shouldn't see this.  This causes you to develop slime mutations.",
+    "flags": [ "CHANGING_SLIME" ]
   }
 ]

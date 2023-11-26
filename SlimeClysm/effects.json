@@ -91,5 +91,13 @@
       "per_mod": [ -0.06 ],
       "speed_mod": [ -1 ]
     }
+  },
+  {
+    "type": "effect_type",
+    "id": "slime_transformation",
+    "name": [ "Slime Transformation Serum" ],
+    "desc": [ "You have taken slime transformation serum." ],
+    "rating": "mixed",
+    "blood_analysis_description": "Slime Serum Contamination"
   }
 ]

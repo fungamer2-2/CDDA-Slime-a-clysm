@@ -15,6 +15,13 @@
     "species": [ "SLIME", "GLOWSLIME" ]
   },
   {
+    "type": "MONSTER_WHITELIST",
+    "monsters": [
+      "mon_player_blob",
+      "mon_slime_ocularium"
+    ]
+  },
+  {
     "type": "effect_on_condition",
     "id": "EOC_PORTAL_STORM_WARN_OR_CAUSE_RECURRING",
     "recurrence": [ "10 days", "11 days" ],

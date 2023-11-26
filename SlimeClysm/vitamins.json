@@ -1,0 +1,13 @@
+[
+  {
+    "id": "slime_transform_serum",
+    "type": "vitamin",
+    "vit_type": "counter",
+    "name": { "str": "Slime Transformation Serum" },
+    "min": 0,
+    "max": 2500,
+    "rate": "1 h",
+    "excess": "slime_transformation",
+    "disease_excess": [ [ 1, 2500 ] ]
+  }
+]
