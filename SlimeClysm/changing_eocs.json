@@ -5,7 +5,8 @@
     "recurrence": [ "5 minutes", "20 minutes" ],
     "condition": {
       "and": [ 
-        { "compare_int": [ { "u_val": "vitamin", "name": "slime_transform_serum" }, ">=", { "const": 250 } ] }  
+        { "compare_int": [ { "u_val": "vitamin", "name": "slime_transform_serum" }, ">=", { "const": 250 } ] },
+        { "not": { "u_has_flag": "CHANGING_SLIME" } }
       ]
     },
     "deactivate_condition": { "u_has_flag": "CHANGING_SLIME" },
@@ -14,12 +15,7 @@
         "run_eocs": [
           {
             "id": "EOC_slime_transform_init_roll",
-            "condition": {
-              "and": [
-                { "x_in_y_chance": { "x": { "u_val": "vitamin", "name": "slime_transform_serum", "default": 250 }, "y": 2500 } },
-                { "not": { "u_has_flag": "CHANGING_SLIME" } }
-              ]
-            },
+            "condition": { "x_in_y_chance": { "x": { "u_val": "vitamin", "name": "slime_transform_serum", "default": 250 }, "y": 2500 } },
             "effect": [
               { "run_eocs": [ "EOC_slime_changing_success" ] }
             ],
